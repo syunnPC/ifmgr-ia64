@@ -49,6 +49,43 @@ python3 tools/test_qemu.py --machine all --fs both
 
 QEMU tests cover both machines with FAT16 and FAT12. See [test documentation](docs/development.md#tests).
 
+## Screenshots
+
+<table align="center">
+  <tr>
+    <td width="50%">
+      <img
+        width="100%"
+        alt="Interface Manager 3.0 boot splash screen"
+        src="https://github.com/user-attachments/assets/11e36773-1340-426d-bcd9-bda3d7fe3315"
+      />
+    </td>
+    <td width="50%">
+      <img
+        width="100%"
+        alt="File manager window"
+        src="https://github.com/user-attachments/assets/7cc375c1-6836-481b-8201-e810aada61a0" 
+      />
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <img 
+        width="100%"
+        alt="Paint application demo"
+        src="https://github.com/user-attachments/assets/b659c412-a2a3-4d04-ab72-3afec375193a"
+      />
+    </td>
+    <td width="50%">
+      <img 
+        width="100%"
+        alt="Program Manager window"
+        src="https://github.com/user-attachments/assets/f6744f4a-0aea-4be9-919c-83ef5d85a00a"
+      />
+    </td>
+  </tr>
+</table>
+
 ## Limitations
 
 - **8086 / Win16:** Requires an IA-32-capable CPU: Itanium or Itanium 2 before the 9000 series. These programs have no IA-32 paging or memory protection; EMS mapping uses copying.
