@@ -93,9 +93,9 @@ QEMU tests cover both machines with FAT16 and FAT12. See [test documentation](do
 - **DOS:** No on-disk journal; interrupted writes require `CHKDSK /F`. `DEBUG`, `DOSSHELL`, `SELECT` and `GRAPHICS` are unimplemented. `KEYB` translates only keys reported with shift state by US-layout firmware.
 - **Interface Manager:** Windows 3.0 standard mode only, raster fonts and US keyboard layout only, no sound. Printing produces PostScript page images at 150 dpi.
 
-## License
+## Third-party license
 
-Original code is [GPL-2.0-or-later](LICENSE), without warranty. Third-party material retains its own licenses and notices.
+Third-party material retains its own licenses and notices.
 
 | Material | License |
 | --- | --- |
@@ -108,3 +108,13 @@ Original code is [GPL-2.0-or-later](LICENSE), without warranty. Third-party mate
 Files translating or quoting MS-DOS sources are marked `GPL-2.0-or-later AND MIT` and retain Microsoft’s notice.
 
 The WDK is used only for building, under Microsoft’s terms; none of it is linked in. Open Watcom’s DOS extenders and Windows samples appear only in test images, not in the repository or `make dist` media.
+
+## Legal disclaimer
+
+This project is independent and is not affiliated with, endorsed by, sponsored by, or supported by Intel Corporation or Microsoft Corporation.
+
+This whole project is licensed under the GNU General Public License, version 2; see the LICENSE file. This program comes with ABSOLUTELY NO WARRANTY.
+
+Microsoft, Windows, MS-DOS are trademarks of the Microsoft group of companies.
+
+Intel and Itanium are trademarks of Intel Corporation or its subsidiaries in the United Stated and other countries.
