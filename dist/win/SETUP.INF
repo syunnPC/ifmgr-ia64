@@ -1,0 +1,4 @@
+[Interface Manager 3.0 Setup]
+; SPDX-License-Identifier: GPL-2.0-or-later
+; SETUP copies \WINDOWS from this disc to the target directory.
+version=3.0

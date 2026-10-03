@@ -1,0 +1,71 @@
+// SPDX-License-Identifier: GPL-2.0-or-later
+#include "windefs.h"
+#include "helpmenu.h"
+#include "setup.h"
+
+SETUP ICON "build\\win\\icons\\setup.ico"
+
+SETUP MENU {
+    POPUP "&Options" {
+        MENUITEM "&Change System Settings...", IDM_SETTINGS
+        MENUITEM "Set &Up Applications...", IDM_APPLICATIONS
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit", IDM_EXIT
+    }
+    POPUP "&Help" {
+        MENUITEM "&Index", IDM_HELPINDEX
+        MENUITEM "&Keyboard", IDM_HELPKEYBOARD
+        MENUITEM "&Commands", IDM_HELPCOMMANDS
+        MENUITEM "&Procedures", IDM_HELPPROCEDURES
+        MENUITEM "&Using Help", IDM_HELPUSING
+        MENUITEM SEPARATOR
+        MENUITEM "&About Setup...", IDM_ABOUT
+    }
+}
+
+SETTINGS DIALOG 20, 20, 250, 92
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU | DS_MODALFRAME
+CAPTION "Change System Settings"
+{
+    LTEXT "&Display:", -1, 6, 8, 40, 9
+    COMBOBOX IDC_DISPLAY, 50, 6, 194, 60, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP | WS_GROUP
+    LTEXT "&Keyboard:", -1, 6, 24, 40, 9
+    COMBOBOX IDC_KEYBOARD, 50, 22, 194, 40, CBS_DROPDOWNLIST | WS_TABSTOP | WS_GROUP
+    LTEXT "&Mouse:", -1, 6, 40, 40, 9
+    COMBOBOX IDC_MOUSE, 50, 38, 194, 40, CBS_DROPDOWNLIST | WS_TABSTOP | WS_GROUP
+    LTEXT "&Network:", -1, 6, 56, 40, 9
+    COMBOBOX IDC_NETWORK, 50, 54, 194, 40, CBS_DROPDOWNLIST | WS_TABSTOP | WS_GROUP
+    DEFPUSHBUTTON "OK", IDOK, 140, 72, 50, 14, WS_TABSTOP | WS_GROUP
+    PUSHBUTTON "Cancel", IDCANCEL, 194, 72, 50, 14, WS_TABSTOP
+}
+
+SEARCH DIALOG 30, 30, 200, 84
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU | DS_MODALFRAME
+CAPTION "Set Up Applications"
+{
+    LTEXT "Setup will search your hard disk for applications and set them up to run from Program Manager.", -1, 6, 4, 188, 18
+    LTEXT "&Search for applications on:", -1, 6, 26, 120, 9
+    LISTBOX IDC_DRIVES, 6, 36, 130, 42, LBS_MULTIPLESEL | WS_VSCROLL | WS_BORDER | WS_TABSTOP | WS_GROUP
+    DEFPUSHBUTTON "OK", IDOK, 144, 36, 50, 14, WS_TABSTOP | WS_GROUP
+    PUSHBUTTON "Cancel", IDCANCEL, 144, 54, 50, 14, WS_TABSTOP
+}
+
+APPLICATIONS DIALOG 20, 20, 300, 136
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU | DS_MODALFRAME
+CAPTION "Set Up Applications"
+{
+    LTEXT "Applications found on hard disk(s):", -1, 6, 4, 120, 9
+    LISTBOX IDC_FOUND, 6, 14, 120, 98, LBS_MULTIPLESEL | WS_VSCROLL | WS_BORDER | WS_TABSTOP | WS_GROUP
+    PUSHBUTTON "&Add ->", IDC_ADD, 132, 30, 36, 14, WS_TABSTOP | WS_GROUP
+    PUSHBUTTON "<- &Remove", IDC_REMOVE, 132, 48, 36, 14, WS_TABSTOP
+    PUSHBUTTON "A&dd All", IDC_ADDALL, 132, 66, 36, 14, WS_TABSTOP
+    LTEXT "Applications to set up:", -1, 174, 4, 120, 9
+    LISTBOX IDC_CHOSEN, 174, 14, 120, 98, LBS_MULTIPLESEL | WS_VSCROLL | WS_BORDER | WS_TABSTOP | WS_GROUP
+    LTEXT "", IDC_SEARCHING, 6, 118, 160, 9
+    DEFPUSHBUTTON "OK", IDOK, 190, 116, 50, 14, WS_TABSTOP | WS_GROUP
+    PUSHBUTTON "Cancel", IDCANCEL, 244, 116, 50, 14, WS_TABSTOP
+}
+
+SETUP ACCELERATORS {
+    VK_F1, IDM_HELPINDEX, VIRTKEY
+}

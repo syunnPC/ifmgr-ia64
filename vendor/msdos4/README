@@ -1,0 +1,19 @@
+Files from the MS-DOS v4.0 sources Microsoft published under the MIT License
+(LICENSE here): https://github.com/microsoft/MS-DOS, commit
+2d04cacc5322951f187bb17e017c12920ac8ebe2, directory v4.0. They are unchanged
+apart from line endings (LF).
+
+  ALLOC.ASM, FAT.ASM          src/DOS/                arena and FAT algorithms (kernel/)
+  MSINIT.ASM                  src/BIOS/               DiskTable2 BPBs (FORMAT, kernel/dos.c)
+  MSFOR.ASM                   src/CMD/FORMAT/         the volume serial number
+  CHKPROC.ASM                 src/CMD/CHKDSK/         CHKDSK's repairs
+  MKCNTRY.ASM, MKCNTRY.INC    src/DEV/COUNTRY/        COUNTRY.SYS data (tools/mkcountry.py)
+  COPYRIGH.INC                src/INC/
+  USA-MS.MSG                  src/MESSAGES/           the utilities' message texts
+  *.SKL, FDISK.MSG            src/CMD/<utility>/, src/DEV/ANSI/
+  keyboard/KDF*.ASM, KEYBOARD.LNK, KEYBMAC.INC, KEYBSHAR.INC
+                              src/DEV/KEYBOARD/       KEYBOARD.SYS (tools/mkkeyboard.py)
+  keyboard/POSTEQU.INC        src/INC/
+
+Sources in the tree that translate these or other v4.0 files, or quote their
+messages, are marked "GPL-2.0-or-later AND MIT" and carry Microsoft's notice.

@@ -1,0 +1,40 @@
+/* SPDX-License-Identifier: GPL-2.0-or-later */
+#include <windows.h>
+#include "w16app.h"
+IDI_APP ICON "w16app.ico"
+IDB_TEST BITMAP "w16app.bmp"
+IDR_DATA RCDATA
+BEGIN
+    "resource data\0"
+END
+ART TEXTFILE "w16app.txt"
+IDR_MENU MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Open...", IDM_OPEN
+        MENUITEM "&Font...", IDM_FONT
+        MENUITEM "&Color...", IDM_COLOR
+        MENUITEM "Fi&nd...", IDM_FIND
+        MENUITEM "&Print...", IDM_PRINT
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit", IDM_EXIT
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About...", IDM_ABOUT
+    END
+END
+IDR_ACCEL ACCELERATORS
+BEGIN
+    "a", IDM_ABOUT, ASCII, ALT
+END
+IDD_ABOUT DIALOG 20, 20, 150, 64
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About W16APP"
+FONT 8, "Helv"
+BEGIN
+    ICON IDI_APP, -1, 8, 8, 20, 20
+    LTEXT "", IDC_TEXT, 36, 10, 100, 10
+    DEFPUSHBUTTON "OK", IDOK, 50, 42, 50, 14
+END

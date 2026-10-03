@@ -1,0 +1,220 @@
+; SPDX-License-Identifier: GPL-2.0-or-later
+; GDI.DLL: Windows 3.0 names, Win32 aliases, and Gdi* functions for USER.
+LIBRARY GDI.DLL
+EXPORTS
+    GetStockObject
+    SelectObject
+    DeleteObject
+    GetObject
+    GetObjectType
+    CreatePen
+    CreatePenIndirect
+    CreateSolidBrush
+    CreateHatchBrush
+    CreatePatternBrush
+    CreateBrushIndirect
+    SetBrushOrg
+    SetBrushOrgEx
+    CreateRectRgn
+    CreateRectRgnIndirect
+    SetRectRgn
+    CombineRgn
+    OffsetRgn
+    GetRgnBox
+    PtInRegion
+    RectInRegion
+    EqualRgn
+    FillRgn
+    FrameRgn
+    InvertRgn
+    PaintRgn
+    SelectClipRgn
+    IntersectClipRect
+    ExcludeClipRect
+    GetClipBox
+    PtVisible
+    RectVisible
+    SetTextColor
+    GetTextColor
+    SetBkColor
+    GetBkColor
+    SetBkMode
+    GetBkMode
+    SetTextAlign
+    GetTextAlign
+    SetROP2
+    GetROP2
+    SetPolyFillMode
+    GetPolyFillMode
+    SetStretchBltMode
+    GetStretchBltMode
+    SetTextCharacterExtra
+    GetTextCharacterExtra
+    GetCurrentPosition
+    GetDCOrg
+    GetNearestColor
+    CreateFont
+    CreateFontIndirect
+    GetTextFace
+    GetCharWidth
+    TextOut
+    ExtTextOut
+    GetTextExtent
+    GetTextExtentPoint
+    GetTextMetrics
+    MoveTo
+    MoveToEx
+    LineTo
+    Polyline
+    Polygon
+    Rectangle
+    RoundRect
+    Ellipse
+    PatBlt
+    BitBlt
+    StretchBlt
+    SetPixel
+    GetPixel
+    CreateBitmap
+    CreateBitmapIndirect
+    CreateCompatibleBitmap
+    CreateDIBitmap
+    GetBitmapBits
+    SetBitmapBits
+    SetDIBits
+    GetDIBits
+    SetDIBitsToDevice
+    StretchDIBits
+    GetDeviceCaps
+    CreateCompatibleDC
+    DeleteDC
+    SaveDC
+    RestoreDC
+    SetMapMode
+    GetMapMode
+    SetWindowOrg
+    GetWindowOrg
+    SetWindowExt
+    GetWindowExt
+    SetViewportOrg
+    GetViewportOrg
+    SetViewportExt
+    GetViewportExt
+    OffsetWindowOrg
+    OffsetViewportOrg
+    ScaleWindowExt
+    ScaleViewportExt
+    SetWindowOrgEx
+    GetWindowOrgEx
+    SetWindowExtEx
+    GetWindowExtEx
+    SetViewportOrgEx
+    GetViewportOrgEx
+    SetViewportExtEx
+    GetViewportExtEx
+    OffsetWindowOrgEx
+    OffsetViewportOrgEx
+    ScaleWindowExtEx
+    ScaleViewportExtEx
+    DPtoLP
+    LPtoDP
+    GetCurrentPositionEx
+    PolyPolygon
+    Arc
+    Chord
+    Pie
+    LineDDA
+    ExtFloodFill
+    FloodFill
+    CreateEllipticRgn
+    CreateEllipticRgnIndirect
+    CreateRoundRectRgn
+    CreatePolyPolygonRgn
+    CreatePolygonRgn
+    OffsetClipRgn
+    GetBrushOrgEx
+    GetBrushOrg
+    SetMapperFlags
+    GetAspectRatioFilter
+    GetAspectRatioFilterEx
+    Escape
+    UnrealizeObject
+    CreateDC
+    CreateIC
+    StartDoc
+    EndDoc
+    StartPage
+    EndPage
+    AbortDoc
+    SetAbortProc
+    ExtDeviceMode
+    DeviceCapabilities
+    CreatePalette
+    SelectPalette
+    RealizePalette
+    UpdateColors
+    GetPaletteEntries
+    SetPaletteEntries
+    AnimatePalette
+    ResizePalette
+    GetNearestPaletteIndex
+    GetSystemPaletteEntries
+    GetSystemPaletteUse
+    SetSystemPaletteUse
+    SetTextJustification
+    EnumFonts
+    EnumFontFamilies
+    AddFontResource
+    RemoveFontResource
+    CreateDiscardableBitmap
+    SetBitmapDimensionEx
+    GetBitmapDimensionEx
+    SetBitmapDimension
+    GetBitmapDimension
+    GdiCreateScreenDC
+    GdiSetDCOrigin
+    GdiSetVisRects
+    GdiFlush
+    GdiSetCursor
+    GdiMoveCursor
+    GdiTaskEnded
+    CreateDIBPatternBrush
+    CreateDIBPatternBrushPt
+    CreateMetaFile
+    CloseMetaFile
+    DeleteMetaFile
+    GetMetaFile
+    CopyMetaFile
+    PlayMetaFile
+    PlayMetaFileRecord
+    EnumMetaFile
+    GetMetaFileBits
+    SetMetaFileBits
+    GetMetaFileBitsEx
+    SetMetaFileBitsEx
+    GdiSetOwner
+    GdiSetFilePrompt
+    GdiSetSpoolNotify
+    GdiSpoolJobs
+    GdiEndSpoolJob
+    TextOutA = TextOut
+    ExtTextOutA = ExtTextOut
+    GetTextExtentPointA = GetTextExtentPoint
+    GetTextExtentPoint32A = GetTextExtentPoint
+    GetTextMetricsA = GetTextMetrics
+    CreateFontA = CreateFont
+    CreateFontIndirectA = CreateFontIndirect
+    GetObjectA = GetObject
+    GetTextFaceA = GetTextFace
+    GetCharWidthA = GetCharWidth
+    EnumFontsA = EnumFonts
+    EnumFontFamiliesA = EnumFontFamilies
+    AddFontResourceA = AddFontResource
+    RemoveFontResourceA = RemoveFontResource
+    CreateDCA = CreateDC
+    CreateICA = CreateIC
+    StartDocA = StartDoc
+    DeviceCapabilitiesA = DeviceCapabilities
+    CreateMetaFileA = CreateMetaFile
+    GetMetaFileA = GetMetaFile
+    CopyMetaFileA = CopyMetaFile

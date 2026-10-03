@@ -1,0 +1,35 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
+# WinHelp's hand over a hotspot: a hand pointing up, the fingertip the hot spot.
+# hotspot 6 0
+     KK                         
+    KWWK                        
+    KWWK                        
+    KWWK                        
+    KWWK                        
+    KWWKKK                      
+    KWWKWWKKK                   
+    KWWKWWKWWKK                 
+ KK KWWKWWKWWKWK                
+KWWKKWWWWWWWWKWWK               
+KWWWKWWWWWWWWWWWK               
+ KWWWWWWWWWWWWWWK               
+  KWWWWWWWWWWWWWK               
+  KWWWWWWWWWWWWWK               
+   KWWWWWWWWWWWWK               
+   KWWWWWWWWWWWK                
+    KWWWWWWWWWWK                
+    KWWWWWWWWWWK                
+     KWWWWWWWWK                 
+     KWWWWWWWWK                 
+     KKKKKKKKKK                 
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                

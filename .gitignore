@@ -1,0 +1,4 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
+/build/
+__pycache__/
+/local.env

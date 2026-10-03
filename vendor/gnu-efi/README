@@ -1,0 +1,5 @@
+The IA-64 startup code (crt0-efi-ia64.S, reloc_ia64.S), linker script
+(elf_ia64_efi.lds) and headers (inc/) of GNU-EFI,
+https://github.com/ncroxon/gnu-efi, commit
+f56c54402de23349bd658dc91eb508d7732a9970, unchanged. LICENSE.sources maps
+GNU-EFI's directories to their licenses; the texts are in licenses/.

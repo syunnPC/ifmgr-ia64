@@ -1,0 +1,8 @@
+Expanded by LZEXPAND.
+The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.
+========================================
+abcabcabcabcabcabcabcabcabcabcabcabc
+Line 1: compressed with COMPRESS, expanded by LZCopy.
+Line 2: compressed with COMPRESS, expanded by LZCopy.
+Line 3: compressed with COMPRESS, expanded by LZCopy.
+End.

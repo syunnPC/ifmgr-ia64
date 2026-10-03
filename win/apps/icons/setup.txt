@@ -1,0 +1,33 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
+# Windows Setup: a computer with a disk going in.
+                                
+                                
+      KKKKKKKKKKKKKKKKKKKK      
+      KLLLLLLLLLLLLLLLLLLKK     
+      KLKKKKKKKKKKKKKKKKLKK     
+      KLKCCCCCCCCCCCCCCKLKK     
+      KLKCWWWWWWWWWWWWCKLKK     
+      KLKCWBBBBBBBBBWWCKLKK     
+      KLKCWWWWWWWWWWWWCKLKK     
+      KLKCWBBBBBBWWWWWCKLKK     
+      KLKCCCCCCCCCCCCCCKLKK     
+      KLKKKKKKKKKKKKKKKKLKK     
+      KLLLLLLLLLLLLLLLLLLKK     
+      KKKKKKKKKKKKKKKKKKKKK     
+         KKKKKKKKKKKKKKK        
+   KKKKKKKKKKKKKKKKKKKKKKKKKK   
+   KLLLLLLLLLLLLLLLLLLLLLLLLK   
+   KLLLLLLLLLLLKKKKKKKKKLLLLK   
+   KLLLggLLLLLLKDDDDDDDKLLLLK   
+   KLLLLLLLLLLLKKKKKKKKKLLLLK   
+   KDDDDDDDDDDDDDDDDDDDDDDDDK   
+   KKKKKKKKKKKKKKKKKKKKKKKKKK   
+           KKKKKKKKKKK          
+           KBBBBBBBBBK          
+           KBBBKWWKBBK          
+           KBBBBBBBBBK          
+           KBBWWWWWBBK          
+           KKKKKKKKKKK          
+                                
+                                
+                                

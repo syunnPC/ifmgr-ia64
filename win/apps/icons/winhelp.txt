@@ -1,0 +1,34 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
+# WinHelp: a book with a question mark on its cover.
+                                
+                                
+     KKKKKKKKKKKKKKKKKKKKKK     
+    KbbbbbbbbbbbbbbbbbbbbbK     
+    KbbbbbbbbbbbbbbbbbbbbbKK    
+    KbbbbbbbWWWWWWbbbbbbbbKWK   
+    KbbbbbbWWbbbbWWbbbbbbbKWK   
+    KbbbbbbWWbbbbWWbbbbbbbKWK   
+    KbbbbbbbbbbbbWWbbbbbbbKWK   
+    KbbbbbbbbbbbWWbbbbbbbbKWK   
+    KbbbbbbbbbbWWbbbbbbbbbKWK   
+    KbbbbbbbbbWWbbbbbbbbbbKWK   
+    KbbbbbbbbbWWbbbbbbbbbbKWK   
+    KbbbbbbbbbbbbbbbbbbbbbKWK   
+    KbbbbbbbbbWWbbbbbbbbbbKWK   
+    KbbbbbbbbbWWbbbbbbbbbbKWK   
+    KbbbbbbbbbbbbbbbbbbbbbKWK   
+    KbbbbbbbbbbbbbbbbbbbbbKWK   
+    KbbbbbbbbbbbbbbbbbbbbbKWK   
+    KbbbbbbbbbbbbbbbbbbbbbKWK   
+    KbbbbbbbbbbbbbbbbbbbbbKWK   
+    KbbbbbbbbbbbbbbbbbbbbbKWK   
+    KbbbbbbbbbbbbbbbbbbbbbKWK   
+    KBBBBBBBBBBBBBBBBBBBBBKWK   
+    KKKKKKKKKKKKKKKKKKKKKKKWK   
+     KWWWWWWWWWWWWWWWWWWWWWWK   
+      KKKKKKKKKKKKKKKKKKKKKKK   
+                                
+                                
+                                
+                                
+                                

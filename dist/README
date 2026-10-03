@@ -1,0 +1,9 @@
+Distribution media built by "make dist":
+  build/dist/dos.img    a hard disk with DOS only (DOS\ holds the utilities,
+                        EFICD.SYS and MSCDEX give CD-ROM drives a letter;
+                        VDM.EXE runs 8086 DOS programs where the processor
+                        has the IA-32 instruction set)
+  build/dist/win30.iso  the Interface Manager CD (built with the WDK); run
+                        D:\SETUP from DOS to install
+dist/dos and dist/win hold the configuration files copied onto them.
+tools/run.sh --dist boots the disk with the CD.

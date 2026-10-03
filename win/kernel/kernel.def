@@ -1,0 +1,146 @@
+; SPDX-License-Identifier: GPL-2.0-or-later
+; KERNEL.DLL: Windows 3.0 names first; Win32 names follow as aliases, and
+; forwarders where Win32 placed a function in another module.
+LIBRARY KERNEL.DLL
+EXPORTS
+    WinExec
+    InitAtomTable
+    AddAtom
+    FindAtom
+    DeleteAtom
+    GetAtomName
+    GlobalAddAtom
+    GlobalFindAtom
+    GlobalDeleteAtom
+    GlobalGetAtomName
+    InitTask
+    ExitProcess
+    ExitKernel
+    GetTaskId
+    GetNumTasks
+    IsTask
+    GetModuleUsage
+    MakeProcInstance
+    FreeProcInstance
+    SetErrorMode
+    FatalAppExit
+    DebugBreak
+    GetFreeSpace
+    GetDOSEnvironment
+    FatalExit
+    SetTaskSignalProc
+    GetCurrentTask
+    Yield
+    OutputDebugString
+    GetVersion
+    GetWinFlags
+    GetModuleHandle
+    GetModuleFileName
+    LoadLibrary
+    FreeLibrary
+    GetProcAddress
+    FindResource
+    LoadResource
+    LockResource
+    FreeResource
+    SizeofResource
+    MulDiv
+    lstrlen
+    lstrcpy
+    lstrcat
+    lstrcpyn
+    lstrcmp
+    lstrcmpi
+    _lopen
+    _lcreat
+    _lclose
+    _lread
+    _lwrite
+    _llseek
+    GlobalAlloc
+    GlobalFree
+    GlobalLock
+    GlobalUnlock
+    GlobalSize
+    GlobalFlags
+    GlobalHandle
+    GlobalReAlloc
+    GlobalCompact
+    LocalAlloc
+    LocalReAlloc
+    LocalFree
+    LocalLock
+    LocalUnlock
+    LocalSize
+    LocalFlags
+    LocalHandle
+    GetLastError
+    GetWindowsDirectory
+    GetSystemDirectory
+    GetCurrentDirectory
+    SetCurrentDirectory
+    CreateDirectory
+    RemoveDirectory
+    DeleteFile
+    MoveFile
+    GetFileAttributes
+    SetFileAttributes
+    CopyFile
+    GetDiskFreeSpace
+    GetLogicalDrives
+    GetDriveType
+    GetTempDrive
+    FindFirstFile
+    FindNextFile
+    FindClose
+    FileTimeToDosDateTime
+    GetLocalTime
+    SetLocalTime
+    OpenFile
+    GetTempFileName
+    GetPrivateProfileString
+    GetPrivateProfileInt
+    WritePrivateProfileString
+    GetProfileString
+    GetProfileInt
+    WriteProfileString
+    FatalAppExitA = FatalAppExit
+    AddAtomA = AddAtom
+    FindAtomA = FindAtom
+    GetAtomNameA = GetAtomName
+    GlobalAddAtomA = GlobalAddAtom
+    GlobalFindAtomA = GlobalFindAtom
+    GlobalGetAtomNameA = GlobalGetAtomName
+    OutputDebugStringA = OutputDebugString
+    GetModuleHandleA = GetModuleHandle
+    GetModuleFileNameA = GetModuleFileName
+    LoadLibraryA = LoadLibrary
+    FindResourceA = FindResource
+    lstrlenA = lstrlen
+    lstrcpyA = lstrcpy
+    lstrcatA = lstrcat
+    lstrcpynA = lstrcpyn
+    lstrcmpA = lstrcmp
+    lstrcmpiA = lstrcmpi
+    GetWindowsDirectoryA = GetWindowsDirectory
+    GetSystemDirectoryA = GetSystemDirectory
+    GetCurrentDirectoryA = GetCurrentDirectory
+    SetCurrentDirectoryA = SetCurrentDirectory
+    CreateDirectoryA = CreateDirectory
+    RemoveDirectoryA = RemoveDirectory
+    DeleteFileA = DeleteFile
+    MoveFileA = MoveFile
+    GetFileAttributesA = GetFileAttributes
+    SetFileAttributesA = SetFileAttributes
+    CopyFileA = CopyFile
+    GetDiskFreeSpaceA = GetDiskFreeSpace
+    FindFirstFileA = FindFirstFile
+    FindNextFileA = FindNextFile
+    GetTempFileNameA = GetTempFileName
+    GetPrivateProfileStringA = GetPrivateProfileString
+    GetPrivateProfileIntA = GetPrivateProfileInt
+    WritePrivateProfileStringA = WritePrivateProfileString
+    GetProfileStringA = GetProfileString
+    GetProfileIntA = GetProfileInt
+    WriteProfileStringA = WriteProfileString
+    GetTickCount = USER.GetTickCount

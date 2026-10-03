@@ -1,0 +1,9 @@
+system.sfd, ms_sans_serif.sfd, courier.sfd, small_fonts.sfd and fixedsys.sfd
+come unchanged from Wine 9.0 (fonts/; https://www.winehq.org), by Huw D M
+Davies, Dmitry Timoshkov and others. Each says it is free software under the
+GNU Lesser General Public License, version 2.1 or later (COPYING.LIB here);
+this project uses them under the GNU General Public License, version 2 or
+later, as that licence allows. They are FontForge source files whose bitmap
+strikes are the raster fonts of Windows' own sizes: System 16 pixels (bold),
+MS Sans Serif 13, 16 and 20, Courier 13, Small Fonts 11 and Fixedsys 15.
+tools/mkfont.py turns a strike into one of GDI's fonts.

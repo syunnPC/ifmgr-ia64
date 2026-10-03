@@ -1,0 +1,431 @@
+; SPDX-License-Identifier: GPL-2.0-or-later
+; USER.DLL: Windows 3.0 names first, then Win32 aliases.
+LIBRARY USER.DLL
+EXPORTS
+    OpenClipboard
+    CloseClipboard
+    EmptyClipboard
+    SetClipboardData
+    GetClipboardData
+    IsClipboardFormatAvailable
+    EnumClipboardFormats
+    CountClipboardFormats
+    RegisterClipboardFormat
+    GetClipboardFormatName
+    GetClipboardOwner
+    GetOpenClipboardWindow
+    SetClipboardViewer
+    GetClipboardViewer
+    ChangeClipboardChain
+    MapDialogRect
+    GetDialogBaseUnits
+    GetNextDlgTabItem
+    GetNextDlgGroupItem
+    GetDlgItem
+    SendDlgItemMessage
+    SetDlgItemText
+    GetDlgItemText
+    SetDlgItemInt
+    GetDlgItemInt
+    CheckDlgButton
+    IsDlgButtonChecked
+    CheckRadioButton
+    CreateDialogIndirectParam
+    CreateDialogParam
+    CreateDialog
+    CreateDialogIndirect
+    DialogBoxIndirectParam
+    DialogBoxParam
+    DialogBox
+    DialogBoxIndirect
+    EndDialog
+    DefDlgProc
+    IsDialogMessage
+    MessageBox
+    OpenComm
+    CloseComm
+    ReadComm
+    WriteComm
+    UngetCommChar
+    TransmitCommChar
+    GetCommState
+    SetCommState
+    GetCommError
+    FlushComm
+    EscapeCommFunction
+    SetCommBreak
+    ClearCommBreak
+    SetCommEventMask
+    GetCommEventMask
+    BuildCommDCB
+    DlgDirList
+    DlgDirListComboBox
+    DlgDirSelect
+    DlgDirSelectComboBox
+    GetSysColor
+    SetSysColors
+    GetSystemMetrics
+    SystemParametersInfo
+    FillRect
+    FrameRect
+    InvertRect
+    DrawFocusRect
+    TabbedTextOut
+    GetTabbedTextExtent
+    DrawText
+    GrayString
+    wvsprintf
+    wsprintf
+    AnsiUpper
+    AnsiLower
+    AnsiUpperBuff
+    AnsiLowerBuff
+    AnsiNext
+    AnsiPrev
+    AnsiToOem
+    OemToAnsi
+    IsCharUpper
+    IsCharLower
+    IsCharAlpha
+    IsCharAlphaNumeric
+    GetTickCount
+    GetCurrentTime
+    MessageBeep
+    OpenSound
+    CloseSound
+    SetVoiceQueueSize
+    SetVoiceNote
+    SetVoiceAccent
+    SetVoiceEnvelope
+    SetSoundNoise
+    SetVoiceSound
+    StartSound
+    StopSound
+    WaitSoundState
+    SyncAllVoices
+    CountVoiceNotes
+    GetThresholdEvent
+    GetThresholdStatus
+    SetVoiceThreshold
+    ExitWindows
+    DefFrameProc
+    DefMDIChildProc
+    TranslateMDISysAccel
+    CreateMenu
+    CreatePopupMenu
+    IsMenu
+    DestroyMenu
+    AppendMenu
+    InsertMenu
+    ModifyMenu
+    DeleteMenu
+    RemoveMenu
+    ChangeMenu
+    CheckMenuItem
+    EnableMenuItem
+    GetMenuState
+    GetMenuString
+    GetMenuItemCount
+    GetMenuItemID
+    GetSubMenu
+    GetMenuCheckMarkDimensions
+    GetMenu
+    SetMenu
+    LoadMenuIndirect
+    LoadMenu
+    GetSystemMenu
+    TrackPopupMenu
+    HiliteMenuItem
+    DrawMenuBar
+    LoadAccelerators
+    DestroyAcceleratorTable
+    CreateAcceleratorTable
+    TranslateAccelerator
+    InitApp
+    PostMessage
+    PostAppMessage
+    PostQuitMessage
+    SendMessage
+    RegisterClass16
+    SetWindowLong16
+    SetClassLong16
+    GetWindowWord16
+    GetClassWord16
+    DialogBoxParam16
+    DialogBoxIndirectParam16
+    CreateDialogParam16
+    CreateDialogIndirectParam16
+    SendMessage16
+    PostMessage16
+    SendDlgItemMessage16
+    CallWindowProc16
+    DefWindowProc16
+    DefDlgProc16
+    DefFrameProc16
+    DefMDIChildProc16
+    SetWindowsHook16
+    SetWindowsHookEx16
+    CallNextHookEx16
+    DefHookProc16
+    GetMessage16
+    PeekMessage16
+    DispatchMessage16
+    IsDialogMessage16
+    CallMsgFilter16
+    CallWindowProc
+    InSendMessage
+    ReplyMessage
+    SetTimer
+    KillTimer
+    CreateCaret
+    DestroyCaret
+    HideCaret
+    ShowCaret
+    SetCaretPos
+    GetCaretPos
+    SetCaretBlinkTime
+    GetCaretBlinkTime
+    GetCursor
+    ShowCursor
+    GetCursorPos
+    SetCursorPos
+    ClipCursor
+    GetDoubleClickTime
+    SetDoubleClickTime
+    SwapMouseButton
+    GetMessagePos
+    GetMessageTime
+    SetCapture
+    ReleaseCapture
+    GetCapture
+    GetKeyState
+    GetAsyncKeyState
+    GetKeyboardState
+    SetKeyboardState
+    ToAscii
+    MapVirtualKey
+    GetKeyboardType
+    GetInputState
+    GetQueueStatus
+    GetSysModalWindow
+    SetSysModalWindow
+    EnableHardwareInput
+    CallMsgFilter
+    PackDDElParam
+    UnpackDDElParam
+    FreeDDElParam
+    ReuseDDElParam
+    SetWindowsHook
+    UnhookWindowsHook
+    DefHookProc
+    SetWindowsHookEx
+    UnhookWindowsHookEx
+    CallNextHookEx
+    RegisterWindowMessage
+    WinHelp
+    DosAway
+    GetMessage
+    PeekMessage
+    WaitMessage
+    TranslateMessage
+    DispatchMessage
+    SetScrollPos
+    GetScrollPos
+    SetScrollRange
+    GetScrollRange
+    ShowScrollBar
+    LoadString
+    LoadBitmap
+    LoadIcon
+    LoadCursor
+    CreateIcon
+    CreateCursor
+    DestroyIcon
+    CreateIconFromResource
+    LookupIconIdFromDirectory
+    DestroyCursor
+    CopyIcon
+    DrawIcon
+    SetCursor
+    ExtractIcon
+    SetRect
+    SetRectEmpty
+    OffsetRect
+    InflateRect
+    IsRectEmpty
+    IntersectRect
+    UnionRect
+    SubtractRect
+    PtInRect
+    EqualRect
+    CopyRect
+    RegisterClass
+    UnregisterClass
+    GetClassInfo
+    GetClassName
+    GetClassLongPtr
+    SetClassLongPtr
+    GetClassLong
+    SetClassLong
+    GetClassWord
+    SetClassWord
+    AdjustWindowRectEx
+    AdjustWindowRect
+    WindowFromPoint
+    ChildWindowFromPoint
+    ClientToScreen
+    ScreenToClient
+    MapWindowPoints
+    GetDC
+    GetWindowDC
+    ReleaseDC
+    BeginPaint
+    EndPaint
+    InvalidateRect
+    InvalidateRgn
+    ValidateRect
+    ValidateRgn
+    GetUpdateRect
+    UpdateWindow
+    ScrollWindow
+    ScrollDC
+    BringWindowToTop
+    GetActiveWindow
+    SetActiveWindow
+    GetFocus
+    SetFocus
+    GetDesktopWindow
+    GetLastActivePopup
+    AnyPopup
+    FlashWindow
+    CreateWindowEx
+    CreateWindow
+    SetWindowPos
+    MoveWindow
+    ArrangeIconicWindows
+    ShowWindow
+    CloseWindow
+    OpenIcon
+    ShowOwnedPopups
+    IsWindow
+    IsWindowVisible
+    IsIconic
+    IsZoomed
+    IsWindowEnabled
+    EnableWindow
+    DestroyWindow
+    GetParent
+    SetParent
+    IsChild
+    GetWindow
+    GetTopWindow
+    GetNextWindow
+    EnumWindows
+    EnumChildWindows
+    EnumTaskWindows
+    GetWindowTask
+    FindWindow
+    GetDlgCtrlID
+    SetWindowText
+    GetWindowText
+    GetWindowTextLength
+    GetWindowLongPtr
+    SetWindowLongPtr
+    GetWindowLong
+    SetWindowLong
+    GetWindowWord
+    SetWindowWord
+    SetProp
+    GetProp
+    RemoveProp
+    IsWindowUnicode
+    GetClientRect
+    GetWindowRect
+    DefWindowProc
+    RegisterClipboardFormatA = RegisterClipboardFormat
+    GetClipboardFormatNameA = GetClipboardFormatName
+    SendDlgItemMessageA = SendDlgItemMessage
+    SetDlgItemTextA = SetDlgItemText
+    GetDlgItemTextA = GetDlgItemText
+    CreateDialogIndirectParamA = CreateDialogIndirectParam
+    CreateDialogParamA = CreateDialogParam
+    CreateDialogA = CreateDialog
+    CreateDialogIndirectA = CreateDialogIndirect
+    DialogBoxIndirectParamA = DialogBoxIndirectParam
+    DialogBoxParamA = DialogBoxParam
+    DialogBoxA = DialogBox
+    DialogBoxIndirectA = DialogBoxIndirect
+    DefDlgProcA = DefDlgProc
+    IsDialogMessageA = IsDialogMessage
+    MessageBoxA = MessageBox
+    DlgDirListA = DlgDirList
+    DlgDirListComboBoxA = DlgDirListComboBox
+    DlgDirSelectA = DlgDirSelect
+    DlgDirSelectComboBoxA = DlgDirSelectComboBox
+    SystemParametersInfoA = SystemParametersInfo
+    TabbedTextOutA = TabbedTextOut
+    GetTabbedTextExtentA = GetTabbedTextExtent
+    DrawTextA = DrawText
+    GrayStringA = GrayString
+    wvsprintfA = wvsprintf
+    wsprintfA = wsprintf
+    AnsiUpperA = AnsiUpper
+    CharUpperA = AnsiUpper
+    CharLowerA = AnsiLower
+    CharNextA = AnsiNext
+    CharPrevA = AnsiPrev
+    IsCharUpperA = IsCharUpper
+    IsCharLowerA = IsCharLower
+    IsCharAlphaA = IsCharAlpha
+    IsCharAlphaNumericA = IsCharAlphaNumeric
+    DefFrameProcA = DefFrameProc
+    DefMDIChildProcA = DefMDIChildProc
+    AppendMenuA = AppendMenu
+    InsertMenuA = InsertMenu
+    ModifyMenuA = ModifyMenu
+    ChangeMenuA = ChangeMenu
+    GetMenuStringA = GetMenuString
+    LoadMenuIndirectA = LoadMenuIndirect
+    LoadMenuA = LoadMenu
+    LoadAcceleratorsA = LoadAccelerators
+    TranslateAcceleratorA = TranslateAccelerator
+    PostMessageA = PostMessage
+    PostAppMessageA = PostAppMessage
+    SendMessageA = SendMessage
+    CallWindowProcA = CallWindowProc
+    ToAsciiA = ToAscii
+    MapVirtualKeyA = MapVirtualKey
+    CallMsgFilterA = CallMsgFilter
+    SetWindowsHookExA = SetWindowsHookEx
+    RegisterWindowMessageA = RegisterWindowMessage
+    WinHelpA = WinHelp
+    GetMessageA = GetMessage
+    PeekMessageA = PeekMessage
+    DispatchMessageA = DispatchMessage
+    LoadStringA = LoadString
+    LoadBitmapA = LoadBitmap
+    LoadIconA = LoadIcon
+    LoadCursorA = LoadCursor
+    ExtractIconA = ExtractIcon
+    RegisterClassA = RegisterClass
+    UnregisterClassA = UnregisterClass
+    GetClassInfoA = GetClassInfo
+    GetClassNameA = GetClassName
+    GetClassLongPtrA = GetClassLongPtr
+    SetClassLongPtrA = SetClassLongPtr
+    GetClassLongA = GetClassLong
+    SetClassLongA = SetClassLong
+    CreateWindowExA = CreateWindowEx
+    CreateWindowA = CreateWindow
+    FindWindowA = FindWindow
+    SetWindowTextA = SetWindowText
+    GetWindowTextA = GetWindowText
+    GetWindowTextLengthA = GetWindowTextLength
+    GetWindowLongPtrA = GetWindowLongPtr
+    SetWindowLongPtrA = SetWindowLongPtr
+    GetWindowLongA = GetWindowLong
+    SetWindowLongA = SetWindowLong
+    SetPropA = SetProp
+    GetPropA = GetProp
+    RemovePropA = RemoveProp
+    DefWindowProcA = DefWindowProc

@@ -1,0 +1,34 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
+# Recorder: a cassette tape, its two reels and the tape between them.
+                                
+                                
+                                
+                                
+                                
+  KKKKKKKKKKKKKKKKKKKKKKKKKKKK  
+  KDDDDDDDDDDDDDDDDDDDDDDDDDDK  
+  KDLLLLLLLLLLLLLLLLLLLLLLLLDK  
+  KDLWWWWWWWWWWWWWWWWWWWWWWLDK  
+  KDLWBBBBBBBBBBBBBBBBBBBBWLDK  
+  KDLWWWWWWWWWWWWWWWWWWWWWWLDK  
+  KDLLLLLLLLLLLLLLLLLLLLLLLLDK  
+  KDLLKKKKKKKKKKKKKKKKKKKLLLDK  
+  KDLLKLLLLKKKKKKKKKKLLLLKLLDK  
+  KDLLKLKKLKRRRRRRRRKLKKLKLLDK  
+  KDLLKLKKLKRRRRRRRRKLKKLKLLDK  
+  KDLLKLLLLKKKKKKKKKKLLLLKLLDK  
+  KDLLKKKKKKKKKKKKKKKKKKKKLLDK  
+  KDLLLLLLLLLLLLLLLLLLLLLLLLDK  
+  KDLLLLLLKKKKKKKKKKKKLLLLLLDK  
+  KDLLLLLKDDDDDDDDDDDDKLLLLLDK  
+  KDDDDDKDDDKDDDDDDKDDDKDDDDDK  
+  KKKKKKKKKKKKKKKKKKKKKKKKKKKK  
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                

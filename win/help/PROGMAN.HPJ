@@ -1,0 +1,11 @@
+; SPDX-License-Identifier: GPL-2.0-or-later
+; Program Manager's help, compiled by tools/hc.py as HC compiled Windows 3.0's.
+[OPTIONS]
+TITLE=Program Manager Help
+CONTENTS=index
+[FILES]
+PROGMAN.RTF
+[MAP]
+keyboard 1
+commands 2
+procedures 3

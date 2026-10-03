@@ -1,0 +1,33 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
+# Calculator: a gray case, a green display and rows of keys.
+                                
+      KKKKKKKKKKKKKKKKKKKK      
+      KLLLLLLLLLLLLLLLLLLK      
+      KLKKKKKKKKKKKKKKKKLK      
+      KLKggggggggggggggKLK      
+      KLKggggggKKgKKgKKKLK      
+      KLKggggggggggggggKLK      
+      KLKKKKKKKKKKKKKKKKLK      
+      KLLLLLLLLLLLLLLLLLLK      
+      KLKKKLKKKLKKKLKKKLLK      
+      KLKWKLKWKLKWKLKrKLLK      
+      KLKKKLKKKLKKKLKKKLLK      
+      KLLLLLLLLLLLLLLLLLLK      
+      KLKKKLKKKLKKKLKKKLLK      
+      KLKWKLKWKLKWKLKrKLLK      
+      KLKKKLKKKLKKKLKKKLLK      
+      KLLLLLLLLLLLLLLLLLLK      
+      KLKKKLKKKLKKKLKKKLLK      
+      KLKWKLKWKLKWKLKrKLLK      
+      KLKKKLKKKLKKKLKKKLLK      
+      KLLLLLLLLLLLLLLLLLLK      
+      KLKKKLKKKLKKKLKKKLLK      
+      KLKWKLKWKLKWKLKbKLLK      
+      KLKKKLKKKLKKKLKKKLLK      
+      KLLLLLLLLLLLLLLLLLLK      
+      KDDDDDDDDDDDDDDDDDDK      
+      KKKKKKKKKKKKKKKKKKKK      
+                                
+                                
+                                
+                                

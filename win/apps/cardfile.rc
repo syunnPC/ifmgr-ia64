@@ -1,0 +1,69 @@
+// SPDX-License-Identifier: GPL-2.0-or-later
+#include "windefs.h"
+#include "helpmenu.h"
+#include "cardfile.h"
+
+CARDFILE ICON "build\\win\\icons\\cardfile.ico"
+
+CARDFILE MENU {
+    POPUP "&File" {
+        MENUITEM "&New", IDM_NEW
+        MENUITEM "&Open...", IDM_OPEN
+        MENUITEM "&Save", IDM_SAVE
+        MENUITEM "Save &As...", IDM_SAVEAS
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit", IDM_EXIT
+    }
+    POPUP "&Edit" {
+        MENUITEM "&Undo\tCtrl+Z", IDM_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X", IDM_CUT
+        MENUITEM "&Copy\tCtrl+C", IDM_COPY
+        MENUITEM "&Paste\tCtrl+V", IDM_PASTE
+        MENUITEM SEPARATOR
+        MENUITEM "&Index...\tF6", IDM_INDEX
+    }
+    POPUP "&View" {
+        MENUITEM "&Cards", IDM_CARDS
+        MENUITEM "&List", IDM_LIST
+    }
+    POPUP "&Card" {
+        MENUITEM "&Add...\tF7", IDM_ADD
+        MENUITEM "&Delete", IDM_DELETE
+        MENUITEM "D&uplicate", IDM_DUPLICATE
+    }
+    POPUP "&Search" {
+        MENUITEM "&Go To...\tF4", IDM_GOTO
+        MENUITEM "&Find...", IDM_FIND
+        MENUITEM "Find &Next\tF3", IDM_FINDNEXT
+    }
+    POPUP "&Help" {
+        MENUITEM "&Index", IDM_HELPINDEX
+        MENUITEM "&Keyboard", IDM_HELPKEYBOARD
+        MENUITEM "&Commands", IDM_HELPCOMMANDS
+        MENUITEM "&Procedures", IDM_HELPPROCEDURES
+        MENUITEM "&Using Help", IDM_HELPUSING
+        MENUITEM SEPARATOR
+        MENUITEM "&About Cardfile...", IDM_ABOUT
+    }
+}
+
+CARDFILE ACCELERATORS {
+    VK_F3, IDM_FINDNEXT, VIRTKEY
+    VK_F4, IDM_GOTO, VIRTKEY
+    VK_F6, IDM_INDEX, VIRTKEY
+    VK_F7, IDM_ADD, VIRTKEY
+    VK_NEXT, IDM_NEXT, VIRTKEY
+    VK_PRIOR, IDM_PREVIOUS, VIRTKEY
+    VK_F1, IDM_HELPINDEX, VIRTKEY
+}
+
+TEXTDLG DIALOG 30, 30, 200, 50
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU | DS_MODALFRAME
+CAPTION "Cardfile"
+{
+    LTEXT "", IDC_PROMPT, 6, 6, 120, 10
+    EDITTEXT IDC_TEXT, 6, 18, 130, 12, ES_AUTOHSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON "OK", IDOK, 144, 6, 50, 14, WS_GROUP | WS_TABSTOP
+    PUSHBUTTON "Cancel", IDCANCEL, 144, 24, 50, 14, WS_TABSTOP
+}

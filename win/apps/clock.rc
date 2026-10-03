@@ -1,0 +1,16 @@
+// SPDX-License-Identifier: GPL-2.0-or-later
+#include "windefs.h"
+#include "clock.h"
+
+CLOCK ICON "build\\win\\icons\\clock.ico"
+
+CLOCK MENU {
+    POPUP "&Settings" {
+        MENUITEM "&Analog", IDM_ANALOG
+        MENUITEM "&Digital", IDM_DIGITAL
+        MENUITEM SEPARATOR
+        MENUITEM "&Seconds", IDM_SECONDS
+        MENUITEM SEPARATOR
+        MENUITEM "A&bout Clock...", IDM_ABOUT
+    }
+}

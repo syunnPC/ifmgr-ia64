@@ -1,0 +1,24 @@
+/* SPDX-License-Identifier: GPL-2.0-or-later */
+#define IDM_NEW 100
+#define IDM_OPEN 101
+#define IDM_MOVE 102
+#define IDM_COPY 103
+#define IDM_DELETE 104
+#define IDM_PROPERTIES 105
+#define IDM_RUN 106
+#define IDM_EXIT 107
+#define IDM_AUTOARRANGE 110
+#define IDM_MINONRUN 111
+#define IDM_CASCADE 120
+#define IDM_TILE 121
+#define IDM_ARRANGE 122
+#define IDM_ABOUT 130
+#define IDM_FIRSTCHILD 200
+#define IDC_GROUP 300
+#define IDC_ITEM 301
+#define IDC_DESCRIPTION 302
+#define IDC_COMMAND 303
+#define IDC_MINIMIZED 304
+#define IDC_SAVE 305
+#define IDC_TOGROUP 306
+#define IDC_NAME 307

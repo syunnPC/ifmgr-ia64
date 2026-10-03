@@ -1,0 +1,72 @@
+// SPDX-License-Identifier: GPL-2.0-or-later
+#include "windefs.h"
+#include "winhelp.h"
+
+WINHELP ICON "build\\win\\icons\\winhelp.ico"
+HAND CURSOR "build\\win\\icons\\winhand.cur"
+
+WINHELP MENU {
+    POPUP "&File" {
+        MENUITEM "&Open...", IDM_OPEN
+        MENUITEM "&Print Topic", IDM_PRINT
+        MENUITEM "P&rinter Setup...", IDM_PRINTSETUP
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit", IDM_EXIT
+    }
+    POPUP "&Edit" {
+        MENUITEM "&Copy\tCtrl+Ins", IDM_COPY
+    }
+    POPUP "Book&mark" {
+        MENUITEM "&Define...", IDM_DEFINE
+    }
+    POPUP "&Help" {
+        MENUITEM "&Using Help", IDM_HELPONHELP
+        MENUITEM SEPARATOR
+        MENUITEM "&About Help...", IDM_ABOUT
+    }
+}
+
+WINHELP ACCELERATORS {
+    VK_INSERT, IDM_COPY, VIRTKEY, CONTROL
+    "C", IDM_COPY, VIRTKEY, CONTROL
+    "I", IDB_INDEX, VIRTKEY, ALT
+    "B", IDB_BACK, VIRTKEY, ALT
+    "S", IDB_SEARCH, VIRTKEY, ALT
+}
+
+SEARCH DIALOG 20, 20, 232, 186
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU | DS_MODALFRAME
+CAPTION "Search"
+{
+    LTEXT "&Type a word, or select one from the list.", -1, 8, 6, 164, 9
+    LTEXT "Then choose Show Topics.", -1, 8, 15, 164, 9
+    EDITTEXT IDC_WORD, 8, 27, 164, 12, ES_AUTOHSCROLL | WS_TABSTOP
+    LISTBOX IDC_WORDS, 8, 41, 164, 62, LBS_NOTIFY | WS_VSCROLL | WS_BORDER | WS_TABSTOP
+    DEFPUSHBUTTON "&Show Topics", IDC_SHOW, 178, 26, 48, 14, WS_TABSTOP
+    PUSHBUTTON "Cancel", IDCANCEL, 178, 44, 48, 14, WS_TABSTOP
+    LTEXT "Select a t&opic, then choose Go To.", -1, 8, 110, 164, 9
+    LISTBOX IDC_TOPICS, 8, 121, 164, 58, LBS_NOTIFY | WS_VSCROLL | WS_BORDER | WS_TABSTOP
+    PUSHBUTTON "&Go To", IDC_GOTO, 178, 120, 48, 14, WS_TABSTOP
+}
+
+BOOKMARK DIALOG 30, 30, 188, 104
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU | DS_MODALFRAME
+CAPTION "Bookmark Define"
+{
+    LTEXT "&Bookmark Name:", -1, 8, 6, 124, 9
+    EDITTEXT IDC_NAME, 8, 17, 124, 12, ES_AUTOHSCROLL | WS_TABSTOP
+    LISTBOX IDC_MARKS, 8, 32, 124, 66, LBS_NOTIFY | WS_VSCROLL | WS_BORDER | WS_TABSTOP
+    DEFPUSHBUTTON "OK", IDOK, 138, 16, 44, 14, WS_TABSTOP
+    PUSHBUTTON "Cancel", IDCANCEL, 138, 34, 44, 14, WS_TABSTOP
+    PUSHBUTTON "&Delete", IDC_DELETE, 138, 52, 44, 14, WS_TABSTOP
+}
+
+ABOUT DIALOG 40, 40, 180, 64
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU | DS_MODALFRAME
+CAPTION "About Help"
+{
+    ICON "WINHELP", -1, 8, 8, 18, 20
+    LTEXT "Help", -1, 36, 8, 136, 9
+    LTEXT "Shows help files: their topics, jumps between them and keyword searches.", -1, 36, 20, 136, 26
+    DEFPUSHBUTTON "OK", IDOK, 122, 46, 50, 14, WS_TABSTOP
+}

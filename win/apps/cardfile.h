@@ -1,0 +1,26 @@
+/* SPDX-License-Identifier: GPL-2.0-or-later */
+#define IDM_NEW 100
+#define IDM_OPEN 101
+#define IDM_SAVE 102
+#define IDM_SAVEAS 103
+#define IDM_EXIT 104
+#define IDM_UNDO 110
+#define IDM_CUT 111
+#define IDM_COPY 112
+#define IDM_PASTE 113
+#define IDM_INDEX 114
+#define IDM_CARDS 120
+#define IDM_LIST 121
+#define IDM_ADD 130
+#define IDM_DELETE 131
+#define IDM_DUPLICATE 132
+#define IDM_GOTO 140
+#define IDM_FIND 141
+#define IDM_FINDNEXT 142
+#define IDM_NEXT 150
+#define IDM_PREVIOUS 151
+#define IDM_ABOUT 160
+#define IDC_TEXT 200
+#define IDC_PROMPT 201
+#define IDC_BODY 300
+#define IDC_LIST 301

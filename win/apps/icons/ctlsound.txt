@@ -1,0 +1,20 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
+# Sound: a loudspeaker with sound waves.
+
+
+
+
+                 K
+                KK      K
+               KLK   K   K
+              KLLK    K   K
+       KKKKKKKLLLK  K  K  K
+       KDDDDDKLLLK   K  K  K
+       KDDDDDKLLLK   K  K  K
+       KDDDDDKLLLK   K  K  K
+       KDDDDDKLLLK   K  K  K
+       KKKKKKKLLLK  K  K  K
+              KLLK    K   K
+               KLK   K   K
+                KK      K
+                 K

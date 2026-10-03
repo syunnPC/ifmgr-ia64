@@ -1,0 +1,22 @@
+/* SPDX-License-Identifier: GPL-2.0-or-later */
+#define IDM_NEW 100
+#define IDM_OPEN 101
+#define IDM_SAVE 102
+#define IDM_SAVEAS 103
+#define IDM_EXIT 104
+#define IDM_CUT 110
+#define IDM_COPY 111
+#define IDM_PASTE 112
+#define IDM_DAY 120
+#define IDM_MONTH 121
+#define IDM_TODAY 130
+#define IDM_PREVIOUS 131
+#define IDM_NEXT 132
+#define IDM_DATE 133
+#define IDM_DAYSETTINGS 140
+#define IDM_ABOUT 150
+#define IDC_DATE 200
+#define IDC_15 201
+#define IDC_30 202
+#define IDC_60 203
+#define IDC_START 204

@@ -1,0 +1,37 @@
+// SPDX-License-Identifier: GPL-2.0-or-later
+#include "windefs.h"
+#include "helpmenu.h"
+#include "printman.h"
+
+PRINTMAN ICON "build\\win\\icons\\printman.ico"
+
+PRINTMAN MENU {
+    POPUP "&Options" {
+        MENUITEM "&Low Priority", IDM_LOW
+        MENUITEM "&Medium Priority", IDM_MEDIUM
+        MENUITEM "&High Priority", IDM_HIGH
+        MENUITEM SEPARATOR
+        MENUITEM "&Alert Always", IDM_ALERT
+        MENUITEM "&Flash if Inactive", IDM_FLASH
+        MENUITEM "&Ignore if Inactive", IDM_IGNORE
+    }
+    POPUP "&View" {
+        MENUITEM "&Time/Date Sent", IDM_TIME
+        MENUITEM "&Print File Size", IDM_SIZE
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit", IDM_EXIT
+    }
+    POPUP "&Help" {
+        MENUITEM "&Index", IDM_HELPINDEX
+        MENUITEM "&Keyboard", IDM_HELPKEYBOARD
+        MENUITEM "&Commands", IDM_HELPCOMMANDS
+        MENUITEM "&Procedures", IDM_HELPPROCEDURES
+        MENUITEM "&Using Help", IDM_HELPUSING
+        MENUITEM SEPARATOR
+        MENUITEM "&About Print Manager...", IDM_ABOUT
+    }
+}
+
+PRINTMAN ACCELERATORS {
+    VK_F1, IDM_HELPINDEX, VIRTKEY
+}

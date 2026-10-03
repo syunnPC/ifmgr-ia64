@@ -1,0 +1,4 @@
+// SPDX-License-Identifier: GPL-2.0-or-later
+1 RCDATA { "hello\0" }
+GREETING TEXT { "named resource\0" }
+STRINGTABLE { 17, "seventeen" }

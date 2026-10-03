@@ -1,0 +1,26 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
+# International: a globe in blue and green on its stand.
+
+
+            KKKKKKKK
+         KKKbbbbggbbKKK
+        KbbbbbgggggbbbbK
+       KbbbggggggggbbbbbK
+      KbbbgggggggggbbbbbbK
+      KbbbbgggggggbbbbbbbK
+     KbbbbbbbggggbbbbbggbK
+     KbbbbbbbbggbbbbbggggK
+     KbbbbbbbbbbbbbbbgggbK
+     KbbbbggbbbbbbbbbbbbbK
+     KbbbggggggbbbbbbbbbbK
+      KbbbgggggggbbbbbbbK
+      KbbbbgggggggbbbbbbK
+       KbbbbbggggbbbbbbK
+        KbbbbbggbbbbbbK
+         KKKbbbbbbbbKKK
+            KKKKKKKK
+              KDDK
+              KDDK
+          KKKKKKKKKKKK
+         KDDDDDDDDDDDDK
+         KKKKKKKKKKKKKK

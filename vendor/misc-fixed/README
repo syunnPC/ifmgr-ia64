@@ -1,0 +1,6 @@
+6x10.bdf, 9x15.bdf and 9x15B.bdf come from the X.Org font-misc-misc package
+(https://gitlab.freedesktop.org/xorg/font/misc-misc), by Markus Kuhn and
+others. Its COPYRIGHT property and COPYING say: "Public domain font.  Share
+and enjoy." (6x10: "Public domain terminal emulator font.  Share and enjoy.")
+tools/mkfont.py turns them into GDI's fonts (Courier's small and large sizes,
+and Terminal), tools/mkvgafont.py into the VGA's.

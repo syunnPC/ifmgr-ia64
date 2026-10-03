@@ -1,0 +1,31 @@
+DOS / Interface Manager for IA-64
+
+Project code: GPL version 2 or later, without warranty (LICENSES/GPL2.TXT).
+Corresponding source: https://github.com/syunnPC/ifmgr-ia64
+Redistribution must include the matching source or another source-delivery
+option permitted by the GPL.
+
+Third-party notices and license texts in LICENSES:
+  MSDOS4.TXT  Microsoft MS-DOS 4 algorithms, messages and country/keyboard
+              data: Copyright (c) Microsoft Corporation, MIT.
+  EFI64.TXT   GNU-EFI IA-64 startup and relocator: Hewlett-Packard, BSD-3-Clause.
+  EFIBSD.TXT  GNU-EFI code and linker script: GNU-EFI Contributors, BSD-3-Clause.
+  EFILIB.TXT  EFI headers/library: Intel and GNU-EFI Contributors, BSD terms.
+  WINE.TXT    Wine raster fonts and Win16 ordinal/signature data: LGPL 2.1
+              or later; raster fonts used under the GPL. Font notices follow below.
+              Wine .spec data: copyright the Wine project authors
+              (win/wow/stubs16.txt).
+  FIXED.TXT   X.Org misc-fixed glyphs: public domain.
+
+The startup title/version are rendered Liberation Serif text, not font data.
+The font is under the SIL Open Font License 1.1; it is not bundled.
+The WDK is a build tool; no Microsoft runtime library is linked.
+Open Watcom samples/extenders appear only in development test images,
+under their own license, and are excluded from distribution media.
+
+Wine font copyright notices (from the original SFD headers):
+  courier.sfd: Copyright (C) 2004 Huw D M Davies, Dmitry Timoshkov
+  fixedsys.sfd: Copyright (C) 2013 Huw D M Davies, Dmitry Timoshkov, et al.
+  ms_sans_serif.sfd: Copyright (C) 2004 Huw D M Davies, Dmitry Timoshkov
+  small_fonts.sfd: Copyright (C) 2006 Huw D M Davies, Dmitry Timoshkov
+  system.sfd: Copyright (C) 2004 Huw D M Davies, Dmitry Timoshkov

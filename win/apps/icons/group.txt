@@ -1,0 +1,32 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
+# A program group: a small window with four program icons.
+                                
+                                
+                                
+    KKKKKKKKKKKKKKKKKKKKKKKK    
+    KLKBBBBBBBBBBBBBBBBBBKLK    
+    KKKKKKKKKKKKKKKKKKKKKKKK    
+    KWWWWWWWWWWWWWWWWWWWWWWK    
+    KWWWWWWWWWWWWWWWWWWWWWWK    
+    KWWKKKKKWWWWWWWKKKKKWWWK    
+    KWWKyyyKWWWWWWWKcccKWWWK    
+    KWWKyyyKWWWWWWWKcccKWWWK    
+    KWWKKKKKWWWWWWWKKKKKWWWK    
+    KWWBBBBBWWWWWWWBBBBBWWWK    
+    KWWWWWWWWWWWWWWWWWWWWWWK    
+    KWWKKKKKWWWWWWWKKKKKWWWK    
+    KWWKgggKWWWWWWWKrrrKWWWK    
+    KWWKgggKWWWWWWWKrrrKWWWK    
+    KWWKKKKKWWWWWWWKKKKKWWWK    
+    KWWBBBBBWWWWWWWBBBBBWWWK    
+    KWWWWWWWWWWWWWWWWWWWWWWK    
+    KKKKKKKKKKKKKKKKKKKKKKKK    
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                

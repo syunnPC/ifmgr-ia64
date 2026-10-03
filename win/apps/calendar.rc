@@ -1,0 +1,77 @@
+// SPDX-License-Identifier: GPL-2.0-or-later
+#include "windefs.h"
+#include "helpmenu.h"
+#include "calendar.h"
+
+CALENDAR ICON "build\\win\\icons\\calendar.ico"
+
+CALENDAR MENU {
+    POPUP "&File" {
+        MENUITEM "&New", IDM_NEW
+        MENUITEM "&Open...", IDM_OPEN
+        MENUITEM "&Save", IDM_SAVE
+        MENUITEM "Save &As...", IDM_SAVEAS
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit", IDM_EXIT
+    }
+    POPUP "&Edit" {
+        MENUITEM "Cu&t\tCtrl+X", IDM_CUT
+        MENUITEM "&Copy\tCtrl+C", IDM_COPY
+        MENUITEM "&Paste\tCtrl+V", IDM_PASTE
+    }
+    POPUP "&View" {
+        MENUITEM "&Day\tF8", IDM_DAY
+        MENUITEM "&Month\tF9", IDM_MONTH
+    }
+    POPUP "&Show" {
+        MENUITEM "&Today", IDM_TODAY
+        MENUITEM "&Previous\tCtrl+PgUp", IDM_PREVIOUS
+        MENUITEM "&Next\tCtrl+PgDn", IDM_NEXT
+        MENUITEM "&Date...\tF4", IDM_DATE
+    }
+    POPUP "&Options" {
+        MENUITEM "&Day Settings...", IDM_DAYSETTINGS
+    }
+    POPUP "&Help" {
+        MENUITEM "&Index", IDM_HELPINDEX
+        MENUITEM "&Keyboard", IDM_HELPKEYBOARD
+        MENUITEM "&Commands", IDM_HELPCOMMANDS
+        MENUITEM "&Procedures", IDM_HELPPROCEDURES
+        MENUITEM "&Using Help", IDM_HELPUSING
+        MENUITEM SEPARATOR
+        MENUITEM "&About Calendar...", IDM_ABOUT
+    }
+}
+
+CALENDAR ACCELERATORS {
+    VK_F8, IDM_DAY, VIRTKEY
+    VK_F9, IDM_MONTH, VIRTKEY
+    VK_F4, IDM_DATE, VIRTKEY
+    VK_PRIOR, IDM_PREVIOUS, VIRTKEY, CONTROL
+    VK_NEXT, IDM_NEXT, VIRTKEY, CONTROL
+    VK_F1, IDM_HELPINDEX, VIRTKEY
+}
+
+DATEDLG DIALOG 30, 30, 150, 40
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU | DS_MODALFRAME
+CAPTION "Show Date"
+{
+    LTEXT "Show &Date:", -1, 6, 8, 40, 10
+    EDITTEXT IDC_DATE, 48, 6, 44, 12, ES_AUTOHSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON "OK", IDOK, 98, 4, 46, 14, WS_GROUP | WS_TABSTOP
+    PUSHBUTTON "Cancel", IDCANCEL, 98, 22, 46, 14, WS_TABSTOP
+}
+
+DAYDLG DIALOG 30, 30, 170, 64
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU | DS_MODALFRAME
+CAPTION "Day Settings"
+{
+    GROUPBOX "Interval", -1, 6, 4, 50, 54
+    CONTROL "&15", IDC_15, "BUTTON", BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP, 12, 16, 36, 10
+    CONTROL "&30", IDC_30, "BUTTON", BS_AUTORADIOBUTTON, 12, 28, 36, 10
+    CONTROL "&60", IDC_60, "BUTTON", BS_AUTORADIOBUTTON, 12, 40, 36, 10
+    LTEXT "&Starting Hour:", -1, 62, 8, 50, 10
+    EDITTEXT IDC_START, 114, 6, 20, 12, WS_TABSTOP | WS_GROUP
+    DEFPUSHBUTTON "OK", IDOK, 62, 26, 46, 14, WS_GROUP | WS_TABSTOP
+    PUSHBUTTON "Cancel", IDCANCEL, 114, 26, 46, 14, WS_TABSTOP
+}

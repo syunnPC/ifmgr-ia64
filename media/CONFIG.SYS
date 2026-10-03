@@ -1,0 +1,3 @@
+REM SPDX-License-Identifier: GPL-2.0-or-later
+FILES=64
+SHELL=C:\COMMAND.COM /P

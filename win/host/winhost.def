@@ -1,0 +1,37 @@
+; SPDX-License-Identifier: GPL-2.0-or-later
+; WINHOST.DLL: built into WIN.COM (win/host/win.c); see win/include/winhost.h.
+LIBRARY WINHOST.DLL
+EXPORTS
+    wh_task_create
+    wh_task_exit
+    wh_task_kill
+    wh_task_current
+    wh_task_slots
+    wh_yield
+    wh_block
+    wh_wake
+    wh_set_idle
+    wh_ticks
+    wh_alloc
+    wh_alloc_low
+    wh_free
+    wh_trace
+    wh_int21
+    wh_display_size
+    wh_display_blt
+    wh_poll_event
+    wh_load_library
+    wh_free_library
+    wh_module_handle
+    wh_module_file_name
+    wh_proc_address
+    wh_find_resource
+    wh_load_application
+    wh_entry
+    wh_env_get
+    wh_env_list
+    wh_dos_session
+    wh_dos_session_ex
+    wh_dos_resume
+    wh_display_epoch
+    wh_ia32_run

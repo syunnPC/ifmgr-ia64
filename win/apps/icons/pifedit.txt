@@ -1,0 +1,33 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
+# PIF Editor: a form with a DOS prompt on it, and a pencil.
+                                
+   KKKKKKKKKKKKKKKKKKKKKKK      
+   KWWWWWWWWWWWWWWWWWWWWWK      
+   KWDDDDDDWKKKKKKKKKKKWWK      
+   KWWWWWWWWWWWWWWWWWWWWWK      
+   KWDDDDDWWKKKKKKKKKKKWWK      
+   KWWWWWWWWWWWWWWWWWWWWWK      
+   KWDDDDDDDWKKKKKKKKKKWWK      
+   KWWWWWWWWWWWWWWWWWWWWWK      
+   KWKKKKKKKKKKKKKKKKKKKWK      
+   KWKKKKKKKKKKKKKKKKKKKWK      
+   KWKLKKLKLLLKKKKKKKKKKWK   yy 
+   KWKLKKLKLKKKKKKKKKKKKWK  yyyK
+   KWKLLLLKLLLKKLLLKKKKKWK yyyyK
+   KWKKKKLKKKLKKKKKKKKKKWKyyyyK 
+   KWKKKKLKLLLKKKKKKKKKKWyyyyK  
+   KWKKKKKKKKKKKKKKKKKKKyyyyK   
+   KWKKKKKKKKKKKKKKKKKKyyyyKK   
+   KWWWWWWWWWWWWWWWWWWyyyyKWK   
+   KWDDDDDWWWWWWWWWWWDyyyKWWK   
+   KWWWWWWWWWWWWWWWWWDDyKWWWK   
+   KWDDDDDDDWWWWWWWWWDDKWWWWK   
+   KWWWWWWWWWWWWWWWWWKKWWWWWK   
+   KKKKKKKKKKKKKKKKKKKKKKKKKK   
+                                
+                                
+                                
+                                
+                                
+                                
+                                

@@ -1,0 +1,7 @@
+; SPDX-License-Identifier: GPL-2.0-or-later
+LIBRARY PEDLL.DLL
+EXPORTS
+    pedll_add
+    pedll_twice @5 NONAME
+    pedll_counter DATA
+    pedll_forward = PEDLL2.pedll2_value

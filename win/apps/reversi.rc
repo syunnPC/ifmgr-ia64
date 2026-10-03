@@ -1,0 +1,35 @@
+// SPDX-License-Identifier: GPL-2.0-or-later
+#include "windefs.h"
+#include "helpmenu.h"
+#include "reversi.h"
+
+REVERSI ICON "build\\win\\icons\\reversi.ico"
+
+REVERSI MENU {
+    POPUP "&Game" {
+        MENUITEM "&Hint", IDM_HINT
+        MENUITEM "&Pass", IDM_PASS
+        MENUITEM "&New", IDM_NEW
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit", IDM_EXIT
+    }
+    POPUP "&Skill" {
+        MENUITEM "&Beginner", IDM_BEGINNER, CHECKED
+        MENUITEM "&Novice", IDM_NOVICE
+        MENUITEM "&Expert", IDM_EXPERT
+        MENUITEM "&Master", IDM_MASTER
+    }
+    POPUP "&Help" {
+        MENUITEM "&Index", IDM_HELPINDEX
+        MENUITEM "&Keyboard", IDM_HELPKEYBOARD
+        MENUITEM "&Commands", IDM_HELPCOMMANDS
+        MENUITEM "&Procedures", IDM_HELPPROCEDURES
+        MENUITEM "&Using Help", IDM_HELPUSING
+        MENUITEM SEPARATOR
+        MENUITEM "&About Reversi...", IDM_ABOUT
+    }
+}
+
+REVERSI ACCELERATORS {
+    VK_F1, IDM_HELPINDEX, VIRTKEY
+}

@@ -1,0 +1,86 @@
+// SPDX-License-Identifier: GPL-2.0-or-later
+#include "windefs.h"
+#include "helpmenu.h"
+#include "winfile.h"
+
+WINFILE ICON "build\\win\\icons\\winfile.ico"
+
+WINFILE MENU {
+    POPUP "&File" {
+        MENUITEM "&Open\tEnter", IDM_OPEN
+        MENUITEM "&Move...\tF7", IDM_MOVE
+        MENUITEM "&Copy...\tF8", IDM_COPY
+        MENUITEM "&Delete...\tDel", IDM_DELETE
+        MENUITEM "Re&name...", IDM_RENAME
+        MENUITEM "Cr&eate Directory...", IDM_MKDIR
+        MENUITEM SEPARATOR
+        MENUITEM "&Run...", IDM_RUN
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit", IDM_EXIT
+    }
+    POPUP "&Disk" {
+        MENUITEM "&Select Drive...", IDM_DRIVE
+    }
+    POPUP "&View" {
+        MENUITEM "&Name", IDM_NAME
+        MENUITEM "&File Details", IDM_DETAILS
+    }
+    POPUP "&Window" {
+        MENUITEM "&New Window", IDM_NEWWINDOW
+        MENUITEM "&Cascade\tShift+F5", IDM_CASCADE
+        MENUITEM "&Tile\tShift+F4", IDM_TILE
+        MENUITEM "&Arrange Icons", IDM_ARRANGE
+        MENUITEM "&Refresh\tF5", IDM_REFRESH
+    }
+    POPUP "&Help" {
+        MENUITEM "&Index", IDM_HELPINDEX
+        MENUITEM "&Keyboard", IDM_HELPKEYBOARD
+        MENUITEM "&Commands", IDM_HELPCOMMANDS
+        MENUITEM "&Procedures", IDM_HELPPROCEDURES
+        MENUITEM "&Using Help", IDM_HELPUSING
+        MENUITEM SEPARATOR
+        MENUITEM "&About File Manager...", IDM_ABOUT
+    }
+}
+
+WINFILE ACCELERATORS {
+    VK_F5, IDM_REFRESH, VIRTKEY
+    VK_F7, IDM_MOVE, VIRTKEY
+    VK_F8, IDM_COPY, VIRTKEY
+    VK_DELETE, IDM_DELETE, VIRTKEY
+    VK_F5, IDM_CASCADE, VIRTKEY, SHIFT
+    VK_F4, IDM_TILE, VIRTKEY, SHIFT
+    VK_F1, IDM_HELPINDEX, VIRTKEY
+}
+
+TWODLG DIALOG 20, 20, 220, 44
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU | DS_MODALFRAME
+CAPTION "Copy"
+{
+    LTEXT "&From:", -1, 6, 8, 24, 10
+    EDITTEXT IDC_FROM, 32, 6, 126, 12, ES_AUTOHSCROLL | WS_TABSTOP
+    LTEXT "&To:", -1, 6, 26, 24, 10
+    EDITTEXT IDC_TO, 32, 24, 126, 12, ES_AUTOHSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON "OK", IDOK, 166, 6, 48, 14, WS_GROUP | WS_TABSTOP
+    PUSHBUTTON "Cancel", IDCANCEL, 166, 24, 48, 14, WS_TABSTOP
+}
+
+ONEDLG DIALOG 20, 20, 220, 40
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU | DS_MODALFRAME
+CAPTION "Delete"
+{
+    LTEXT "", IDC_LABEL, 6, 8, 40, 10
+    EDITTEXT IDC_FROM, 48, 6, 110, 12, ES_AUTOHSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON "OK", IDOK, 166, 4, 48, 14, WS_GROUP | WS_TABSTOP
+    PUSHBUTTON "Cancel", IDCANCEL, 166, 22, 48, 14, WS_TABSTOP
+}
+
+DRIVEDLG DIALOG 20, 20, 120, 70
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU | DS_MODALFRAME
+CAPTION "Select Drive"
+{
+    LTEXT "&Drive:", -1, 6, 4, 50, 10
+    LISTBOX IDC_DRIVES, 6, 14, 54, 50, LBS_NOTIFY | WS_VSCROLL | WS_BORDER | WS_TABSTOP
+    DEFPUSHBUTTON "OK", IDOK, 66, 14, 48, 14, WS_GROUP | WS_TABSTOP
+    PUSHBUTTON "Cancel", IDCANCEL, 66, 32, 48, 14, WS_TABSTOP
+}

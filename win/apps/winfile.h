@@ -1,0 +1,24 @@
+/* SPDX-License-Identifier: GPL-2.0-or-later */
+#define IDM_OPEN 100
+#define IDM_MOVE 101
+#define IDM_COPY 102
+#define IDM_DELETE 103
+#define IDM_RENAME 104
+#define IDM_MKDIR 105
+#define IDM_RUN 106
+#define IDM_EXIT 107
+#define IDM_DRIVE 110
+#define IDM_NAME 120
+#define IDM_DETAILS 121
+#define IDM_NEWWINDOW 130
+#define IDM_CASCADE 131
+#define IDM_TILE 132
+#define IDM_ARRANGE 133
+#define IDM_REFRESH 134
+#define IDM_ABOUT 140
+#define IDM_FIRSTCHILD 200
+#define IDC_FROM 300
+#define IDC_TO 301
+#define IDC_LABEL 302
+#define IDC_DRIVES 303
+#define IDC_LIST 304

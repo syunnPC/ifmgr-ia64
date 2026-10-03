@@ -1,0 +1,11 @@
+; SPDX-License-Identifier: GPL-2.0-or-later
+; Paintbrush's help, compiled by tools/hc.py as HC compiled Windows 3.0's.
+[OPTIONS]
+TITLE=Paintbrush Help
+CONTENTS=index
+[FILES]
+PBRUSH.RTF
+[MAP]
+keyboard 1
+commands 2
+procedures 3

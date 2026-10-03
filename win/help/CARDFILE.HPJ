@@ -1,0 +1,11 @@
+; SPDX-License-Identifier: GPL-2.0-or-later
+; Cardfile's help, compiled by tools/hc.py as HC compiled Windows 3.0's.
+[OPTIONS]
+TITLE=Cardfile Help
+CONTENTS=index
+[FILES]
+CARDFILE.RTF
+[MAP]
+keyboard 1
+commands 2
+procedures 3

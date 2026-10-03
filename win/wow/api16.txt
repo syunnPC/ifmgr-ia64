@@ -1,0 +1,706 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
+# WOW.DLL's Win16 functions: MODULE ORDINAL NAME RETURN ARGUMENTS... (see
+# tools/mkwow.py for the types and flags). Ordinals and argument sizes are
+# those of Windows 3.0's KERNEL, USER and GDI, as Wine's .spec files list them
+# (see stubs16.txt). Functions without !custom call
+# the native function of the same name with converted arguments.
+KERNEL 3 GetVersion dword !custom
+KERNEL 4 LocalInit bool word word word !custom
+KERNEL 5 LocalAlloc word word word !custom
+KERNEL 6 LocalReAlloc word word word word !custom
+KERNEL 7 LocalFree word word !custom
+KERNEL 8 LocalLock dword word !custom
+KERNEL 9 LocalUnlock bool word !custom
+KERNEL 10 LocalSize word word !custom
+KERNEL 11 LocalHandle word word !custom
+KERNEL 12 LocalFlags word word !custom
+KERNEL 13 LocalCompact word word !custom
+KERNEL 15 GlobalAlloc word word dword !custom
+KERNEL 16 GlobalReAlloc word word dword word !custom
+KERNEL 17 GlobalFree word word !custom
+KERNEL 18 GlobalLock dword word !custom
+KERNEL 19 GlobalUnlock bool word !custom
+KERNEL 20 GlobalSize dword word !custom
+KERNEL 21 GlobalHandle dword word !custom
+KERNEL 22 GlobalFlags word word !custom
+KERNEL 23 LockSegment word word !custom
+KERNEL 24 UnlockSegment word word !custom
+KERNEL 25 GlobalCompact dword dword
+KERNEL 29 Yield void
+KERNEL 30 WaitEvent word word !custom
+KERNEL 36 GetCurrentTask dword !custom
+KERNEL 37 GetCurrentPDB word !custom
+KERNEL 45 LoadModule word str ptr !custom
+KERNEL 46 FreeModule bool word !custom
+KERNEL 47 GetModuleHandle dword segptr !custom
+KERNEL 48 GetModuleUsage int word !custom
+KERNEL 49 GetModuleFileName int word ptr int !custom
+KERNEL 50 GetProcAddress dword word str !custom
+KERNEL 51 MakeProcInstance dword segptr word !custom
+KERNEL 52 FreeProcInstance void segptr !custom
+KERNEL 54 GetInstanceData int word word word !custom
+KERNEL 55 Catch int ptr !regs
+KERNEL 56 Throw void ptr word !regs
+KERNEL 57 GetProfileInt int str str int
+KERNEL 58 GetProfileString int str str str buf int
+KERNEL 59 WriteProfileString bool str str str
+KERNEL 60 FindResource word word resname resname !custom
+KERNEL 61 LoadResource word word word !custom
+KERNEL 62 LockResource dword word !custom
+KERNEL 63 FreeResource bool word !custom
+KERNEL 64 AccessResource int word word !custom
+KERNEL 65 SizeofResource dword word word !custom
+KERNEL 66 AllocResource word word word long !custom
+KERNEL 67 SetResourceHandler dword word resname segptr !custom
+KERNEL 68 InitAtomTable bool int !custom
+KERNEL 69 FindAtom word resname !custom
+KERNEL 70 AddAtom word resname !custom
+KERNEL 71 DeleteAtom word word !custom
+KERNEL 72 GetAtomName word word ptr int !custom
+KERNEL 73 GetAtomHandle word word !custom
+KERNEL 74 OpenFile hfile str ptr word
+KERNEL 81 _lclose hfile hfile
+KERNEL 82 _lread word hfile ptr word
+KERNEL 83 _lcreat hfile str int
+KERNEL 84 _llseek long hfile long int
+KERNEL 85 _lopen hfile str int
+KERNEL 86 _lwrite word hfile ptr word
+KERNEL 88 lstrcpy arg0 buf str
+KERNEL 89 lstrcat arg0 buf str
+KERNEL 90 lstrlen int str
+KERNEL 91 InitTask void !regs
+KERNEL 92 GetTempDrive byte char
+KERNEL 93 GetCodeHandle word segptr !custom
+KERNEL 95 LoadLibrary word str !custom
+KERNEL 96 FreeLibrary void word !custom
+KERNEL 97 GetTempFileName int byte str word buf
+KERNEL 102 DOS3Call void !regs
+KERNEL 107 SetErrorMode word word
+KERNEL 111 GlobalWire dword word !custom
+KERNEL 112 GlobalUnWire bool word !custom
+KERNEL 115 OutputDebugString void str
+KERNEL 121 LocalShrink word word word !custom
+KERNEL 127 GetPrivateProfileInt word str str int str
+KERNEL 128 GetPrivateProfileString int str str str buf int str
+KERNEL 129 WritePrivateProfileString bool str str str str
+KERNEL 131 GetDOSEnvironment dword !custom
+KERNEL 132 GetWinFlags dword !custom
+KERNEL 133 GetExePtr word word !custom
+KERNEL 134 GetWindowsDirectory word buf word
+KERNEL 135 GetSystemDirectory word buf word
+KERNEL 136 GetDriveType word int
+KERNEL 137 FatalAppExit void word str
+KERNEL 138 GetHeapSpaces dword word !custom
+KERNEL 150 DirectedYield void word !custom
+KERNEL 152 GetNumTasks word
+KERNEL 154 GlobalNotify void segptr !custom
+KERNEL 155 GetTaskDS word !custom
+KERNEL 166 WinExec word str word
+KERNEL 167 GetExpWinVer word word !custom
+KERNEL 169 GetFreeSpace dword word
+KERNEL 170 AllocCStoDSAlias word word !custom
+KERNEL 171 AllocDStoCSAlias word word !custom
+KERNEL 175 AllocSelector word word !custom
+KERNEL 176 FreeSelector word word !custom
+KERNEL 184 GlobalDOSAlloc dword dword !custom
+KERNEL 186 GetSelectorBase dword word !custom
+KERNEL 187 SetSelectorBase word word dword !custom
+KERNEL 188 GetSelectorLimit dword word !custom
+KERNEL 189 SetSelectorLimit word word dword !custom
+KERNEL 197 GlobalFix word word !custom
+KERNEL 198 GlobalUnfix bool word !custom
+KERNEL 199 SetHandleCount word word !custom
+KERNEL 203 DebugBreak void
+KERNEL 207 IsDBCSLeadByte bool word !custom
+KERNEL 320 IsTask bool word !custom
+KERNEL 334 IsBadReadPtr bool segptr word !custom
+KERNEL 335 IsBadWritePtr bool segptr word !custom
+KERNEL 336 IsBadCodePtr bool segptr !custom
+KERNEL 337 IsBadStringPtr bool segptr word !custom
+KERNEL 346 IsBadHugeReadPtr bool segptr long !custom
+KERNEL 347 IsBadHugeWritePtr bool segptr long !custom
+KERNEL 348 hmemcpy void ptr ptr long !custom
+KERNEL 349 _hread long hfile ptr long =_lread
+KERNEL 350 _hwrite long hfile ptr long =_lwrite
+KERNEL 353 lstrcpyn arg0 buf str int
+KERNEL 411 GetCurrentDirectory dword dword buf
+KERNEL 412 SetCurrentDirectory bool str
+KERNEL 420 GetFileAttributes dword str
+KERNEL 421 SetFileAttributes bool str dword
+USER 1 MessageBox int hwnd str str word
+USER 5 InitApp bool word !custom
+USER 6 PostQuitMessage void int
+USER 7 ExitWindows bool dword word
+USER 10 SetTimer word hwnd word word segptr !custom
+USER 12 KillTimer bool hwnd word !custom
+USER 13 GetTickCount dword
+USER 15 GetCurrentTime dword
+USER 16 ClipCursor void rect_in
+USER 17 GetCursorPos void point_io
+USER 18 SetCapture hwnd hwnd
+USER 19 ReleaseCapture void
+USER 20 SetDoubleClickTime void word
+USER 21 GetDoubleClickTime word
+USER 22 SetFocus hwnd hwnd
+USER 23 GetFocus hwnd
+USER 24 RemoveProp handle16 hwnd resname
+USER 25 GetProp handle16 hwnd resname
+USER 26 SetProp bool hwnd resname handle16
+USER 28 ClientToScreen void hwnd point_io
+USER 29 ScreenToClient void hwnd point_io
+USER 30 WindowFromPoint hwnd long !custom
+USER 31 IsIconic bool hwnd
+USER 32 GetWindowRect void hwnd rect_io
+USER 33 GetClientRect void hwnd rect_io
+USER 34 EnableWindow bool hwnd bool
+USER 35 IsWindowEnabled bool hwnd
+USER 36 GetWindowText int hwnd buf int
+USER 37 SetWindowText void hwnd str
+USER 38 GetWindowTextLength int hwnd
+USER 39 BeginPaint hdc hwnd ptr !custom
+USER 40 EndPaint bool hwnd ptr !custom
+USER 41 CreateWindow hwnd resname str long int int int int word word word segptr !custom
+USER 42 ShowWindow bool hwnd int
+USER 43 CloseWindow void hwnd
+USER 44 OpenIcon bool hwnd
+USER 45 BringWindowToTop bool hwnd
+USER 46 GetParent hwnd hwnd
+USER 47 IsWindow bool hwnd
+USER 48 IsChild bool hwnd hwnd
+USER 49 IsWindowVisible bool hwnd
+USER 50 FindWindow hwnd str str
+USER 52 AnyPopup bool
+USER 53 DestroyWindow bool hwnd
+USER 54 EnumWindows bool segptr long !custom
+USER 55 EnumChildWindows bool hwnd segptr long !custom
+USER 56 MoveWindow bool hwnd int int int int bool
+USER 57 RegisterClass word ptr !custom
+USER 58 GetClassName int hwnd buf int
+USER 59 SetActiveWindow hwnd hwnd
+USER 60 GetActiveWindow hwnd
+USER 61 ScrollWindow void hwnd int int rect_in rect_in
+USER 62 SetScrollPos int hwnd int int bool
+USER 63 GetScrollPos int hwnd int
+USER 64 SetScrollRange void hwnd int int int bool
+USER 65 GetScrollRange void hwnd int ptr ptr !custom
+USER 66 GetDC hdc hwnd
+USER 67 GetWindowDC hdc hwnd
+USER 68 ReleaseDC int hwnd hdc
+USER 69 SetCursor hcursor hcursor
+USER 70 SetCursorPos void int int
+USER 71 ShowCursor int bool
+USER 72 SetRect void rect_io int int int int
+USER 73 SetRectEmpty void rect_io
+USER 74 CopyRect void rect_io rect_in
+USER 75 IsRectEmpty bool rect_in
+USER 76 PtInRect bool ptr long !custom
+USER 77 OffsetRect void rect_io int int
+USER 78 InflateRect void rect_io int int
+USER 79 IntersectRect bool rect_io rect_in rect_in
+USER 80 UnionRect bool rect_io rect_in rect_in
+USER 81 FillRect int hdc ptr word !custom
+USER 82 InvertRect void hdc rect_in
+USER 83 FrameRect int hdc rect_in hbrush
+USER 84 DrawIcon bool hdc int int hicon
+USER 85 DrawText int hdc str int rect_io word
+USER 87 DialogBox int word resname word segptr !custom
+USER 88 EndDialog bool hwnd int
+USER 89 CreateDialog hwnd word resname word segptr !custom
+USER 90 IsDialogMessage bool hwnd ptr !custom
+USER 91 GetDlgItem hwnd hwnd int
+USER 92 SetDlgItemText void hwnd int str
+USER 93 GetDlgItemText int hwnd int buf int
+USER 94 SetDlgItemInt void hwnd int word bool
+USER 95 GetDlgItemInt word hwnd int ptr bool !custom
+USER 96 CheckRadioButton void hwnd int int int
+USER 97 CheckDlgButton void hwnd int word
+USER 98 IsDlgButtonChecked word hwnd int
+USER 99 DlgDirSelect bool hwnd buf int
+USER 100 DlgDirList int hwnd buf int int word
+USER 101 SendDlgItemMessage long hwnd int word word long !custom
+USER 102 AdjustWindowRect bool rect_io dword bool
+USER 103 MapDialogRect void hwnd rect_io
+USER 104 MessageBeep void word
+USER 105 FlashWindow bool hwnd bool
+USER 106 GetKeyState int int
+USER 107 DefWindowProc long hwnd word word long !custom
+USER 108 GetMessage bool ptr word word word !custom
+USER 109 PeekMessage bool ptr word word word word !custom
+USER 110 PostMessage bool hwnd word word long !custom
+USER 111 SendMessage long hwnd word word long !custom
+USER 112 WaitMessage void
+USER 113 TranslateMessage bool ptr !custom
+USER 114 DispatchMessage long ptr !custom
+USER 115 ReplyMessage void long
+USER 116 PostAppMessage bool word word word long !custom
+USER 118 RegisterWindowMessage word str
+USER 119 GetMessagePos dword
+USER 120 GetMessageTime long
+USER 121 SetWindowsHook dword int segptr !custom
+USER 122 CallWindowProc long segptr hwnd word word long !custom
+USER 123 CallMsgFilter bool ptr int !custom
+USER 124 UpdateWindow void hwnd
+USER 125 InvalidateRect void hwnd rect_in bool
+USER 126 InvalidateRgn void hwnd hrgn bool
+USER 127 ValidateRect void hwnd rect_in
+USER 128 ValidateRgn void hwnd hrgn
+USER 129 GetClassWord word hwnd int !custom
+USER 130 SetClassWord word hwnd int word !custom
+USER 131 GetClassLong long hwnd int !custom
+USER 132 SetClassLong long hwnd int long !custom
+USER 133 GetWindowWord word hwnd int !custom
+USER 134 SetWindowWord word hwnd int word !custom
+USER 135 GetWindowLong long hwnd int !custom
+USER 136 SetWindowLong long hwnd int long !custom
+USER 137 OpenClipboard bool hwnd
+USER 138 CloseClipboard bool
+USER 139 EmptyClipboard bool
+USER 140 GetClipboardOwner hwnd
+USER 141 SetClipboardData word word word !custom
+USER 142 GetClipboardData word word !custom
+USER 143 CountClipboardFormats int
+USER 144 EnumClipboardFormats word word
+USER 145 RegisterClipboardFormat word str
+USER 146 GetClipboardFormatName int word buf int
+USER 147 SetClipboardViewer hwnd hwnd
+USER 148 GetClipboardViewer hwnd
+USER 149 ChangeClipboardChain bool hwnd hwnd
+USER 150 LoadMenu hmenu word resname !custom
+USER 151 CreateMenu hmenu
+USER 152 DestroyMenu bool hmenu
+USER 154 CheckMenuItem int hmenu word word
+USER 155 EnableMenuItem bool hmenu word word
+USER 156 GetSystemMenu hmenu hwnd bool
+USER 157 GetMenu hmenu hwnd
+USER 158 SetMenu bool hwnd hmenu
+USER 159 GetSubMenu hmenu hmenu int
+USER 160 DrawMenuBar void hwnd
+USER 161 GetMenuString int hmenu word buf int word
+USER 162 HiliteMenuItem bool hwnd hmenu word word
+USER 163 CreateCaret void hwnd hbitmap int int
+USER 164 DestroyCaret void
+USER 165 SetCaretPos void int int
+USER 166 HideCaret void hwnd
+USER 167 ShowCaret void hwnd
+USER 168 SetCaretBlinkTime void word
+USER 169 GetCaretBlinkTime word
+USER 170 ArrangeIconicWindows word hwnd
+USER 171 WinHelp bool hwnd str word long !custom
+USER 173 LoadCursor hcursor word resname !custom
+USER 174 LoadIcon hicon word resname !custom
+USER 175 LoadBitmap hbitmap hinstance resname !custom
+USER 176 LoadString int word word ptr int !custom
+USER 177 LoadAccelerators haccel word resname !custom
+USER 178 TranslateAccelerator int hwnd word ptr !custom
+USER 179 GetSystemMetrics int int
+USER 180 GetSysColor dword int
+USER 181 SetSysColors void int ptr ptr !custom
+USER 183 GetCaretPos void point_io
+USER 185 GrayString bool hdc word segptr segptr int int int int int !custom
+USER 186 SwapMouseButton bool bool
+USER 188 SetSysModalWindow hwnd hwnd
+USER 189 GetSysModalWindow hwnd
+USER 190 GetUpdateRect bool hwnd rect_io bool
+USER 191 ChildWindowFromPoint hwnd hwnd long !custom
+USER 192 InSendMessage bool
+USER 193 IsClipboardFormatAvailable bool word
+USER 194 DlgDirSelectComboBox bool hwnd buf int
+USER 195 DlgDirListComboBox int hwnd buf int int word
+USER 196 TabbedTextOut long hdc int int ptr int int ptr int !custom
+USER 197 GetTabbedTextExtent dword hdc ptr int int ptr !custom
+USER 200 OpenComm int str word word
+USER 201 SetCommState int ptr !custom
+USER 202 GetCommState int int ptr !custom
+USER 203 GetCommError int int ptr !custom
+USER 204 ReadComm int int buf int
+USER 205 WriteComm int int ptr int
+USER 206 TransmitCommChar int int char
+USER 207 CloseComm int int !custom
+USER 208 SetCommEventMask dword int word !custom
+USER 209 GetCommEventMask word int int !custom
+USER 210 SetCommBreak int int
+USER 211 ClearCommBreak int int
+USER 212 UngetCommChar int int char
+USER 213 BuildCommDCB int str ptr !custom
+USER 214 EscapeCommFunction long int int
+USER 215 FlushComm int int int
+USER 218 DialogBoxIndirect int word word word segptr !custom
+USER 219 CreateDialogIndirect hwnd word ptr word segptr !custom
+USER 220 LoadMenuIndirect hmenu ptr !custom
+USER 221 ScrollDC bool hdc int int rect_in rect_in hrgn rect_io
+USER 222 GetKeyboardState void ptr
+USER 223 SetKeyboardState void ptr
+USER 224 GetWindowTask word hwnd !custom
+USER 225 EnumTaskWindows bool word segptr long !custom
+USER 227 GetNextDlgGroupItem hwnd hwnd hwnd bool
+USER 228 GetNextDlgTabItem hwnd hwnd hwnd bool
+USER 229 GetTopWindow hwnd hwnd
+USER 230 GetNextWindow hwnd hwnd word
+USER 232 SetWindowPos bool hwnd word int int int int word !custom
+USER 233 SetParent hwnd hwnd hwnd
+USER 234 UnhookWindowsHook bool int segptr !custom
+USER 235 DefHookProc long int word long ptr !custom
+USER 236 GetCapture hwnd
+USER 239 DialogBoxParam int word resname word segptr long !custom
+USER 240 DialogBoxIndirectParam int word word word segptr long !custom
+USER 241 CreateDialogParam hwnd word resname word segptr long !custom
+USER 242 CreateDialogIndirectParam hwnd word ptr word segptr long !custom
+USER 243 GetDialogBaseUnits long
+USER 244 EqualRect bool rect_in rect_in
+USER 247 GetCursor hcursor
+USER 248 GetOpenClipboardWindow hwnd
+USER 249 GetAsyncKeyState int int
+USER 250 GetMenuState word hmenu word word
+USER 258 MapWindowPoints void hwnd hwnd ptr word !custom
+USER 259 BeginDeferWindowPos word int !custom
+USER 260 DeferWindowPos word word word word int int int int word !custom
+USER 261 EndDeferWindowPos bool word !custom
+USER 262 GetWindow hwnd hwnd word
+USER 263 GetMenuItemCount int hmenu
+USER 264 GetMenuItemID word hmenu int
+USER 265 ShowOwnedPopups void hwnd bool
+USER 267 ShowScrollBar void hwnd int bool
+USER 268 GlobalAddAtom word resname !custom
+USER 269 GlobalDeleteAtom word word !custom
+USER 270 GlobalFindAtom word resname !custom
+USER 271 GlobalGetAtomName word word ptr int !custom
+USER 272 IsZoomed bool hwnd
+USER 277 GetDlgCtrlID int hwnd
+USER 282 SelectPalette hpalette hdc hpalette bool
+USER 283 RealizePalette uint hdc
+USER 284 GetFreeSystemResources word word !custom
+USER 286 GetDesktopWindow hwnd
+USER 287 GetLastActivePopup hwnd hwnd
+USER 290 RedrawWindow bool hwnd ptr word word !custom
+USER 291 SetWindowsHookEx dword int segptr word word !custom
+USER 292 UnhookWindowsHookEx bool segptr !custom
+USER 293 CallNextHookEx long segptr int word long !custom
+USER 308 DefDlgProc long hwnd word word long !custom
+USER 331 EnableHardwareInput bool bool
+USER 334 GetQueueStatus dword word
+USER 335 GetInputState bool
+USER 358 IsMenu bool hmenu
+USER 368 CopyIcon hicon hinstance hicon
+USER 369 CopyCursor hcursor hinstance hcursor =CopyIcon
+USER 373 SubtractRect bool rect_io rect_in rect_in
+USER 403 UnregisterClass bool str word !custom
+USER 404 GetClassInfo bool word segptr ptr !custom
+USER 406 CreateCursor hcursor hinstance int int int int ptr ptr
+USER 407 CreateIcon hicon hinstance int int byte byte ptr ptr
+USER 410 InsertMenu bool word word word word segptr !custom
+USER 411 AppendMenu bool word word word segptr !custom
+USER 412 RemoveMenu bool hmenu word word
+USER 413 DeleteMenu bool hmenu word word
+USER 414 ModifyMenu bool hmenu word word word segptr !custom
+USER 415 CreatePopupMenu hmenu
+USER 416 TrackPopupMenu bool hmenu word int int int hwnd rect_in
+USER 417 GetMenuCheckMarkDimensions dword
+USER 420 _wsprintf int ptr str !custom !cdecl
+USER 421 wvsprintf int ptr str ptr !custom
+USER 430 lstrcmp int str str
+USER 431 AnsiUpper dword segptr !custom
+USER 432 AnsiLower dword segptr !custom
+USER 433 IsCharAlpha bool byte
+USER 434 IsCharAlphaNumeric bool byte
+USER 435 IsCharUpper bool byte
+USER 436 IsCharLower bool byte
+USER 437 AnsiUpperBuff word buf word
+USER 438 AnsiLowerBuff word buf word
+USER 445 DefFrameProc long hwnd hwnd word word long !custom
+USER 447 DefMDIChildProc long hwnd word word long !custom
+USER 451 TranslateMDISysAccel bool hwnd ptr !custom
+USER 452 CreateWindowEx hwnd long resname str long int int int int word word word segptr !custom
+USER 454 AdjustWindowRectEx bool rect_io dword bool dword
+USER 457 DestroyIcon bool hicon
+USER 458 DestroyCursor bool hcursor
+USER 466 DrawFocusRect void hdc rect_in
+USER 471 lstrcmpi int str str
+USER 472 AnsiNext dword segptr !custom
+USER 473 AnsiPrev dword segptr segptr !custom
+USER 482 EnableScrollBar bool hwnd word word !custom
+USER 483 SystemParametersInfo bool word word ptr word !custom
+GDI 1 SetBkColor colorref hdc colorref
+GDI 2 SetBkMode int hdc int
+GDI 3 SetMapMode int hdc int
+GDI 4 SetROP2 int hdc int
+GDI 5 SetRelAbs int hdc int !custom
+GDI 6 SetPolyFillMode int hdc int
+GDI 7 SetStretchBltMode int hdc int
+GDI 8 SetTextCharacterExtra int hdc int
+GDI 9 SetTextColor colorref hdc colorref
+GDI 10 SetTextJustification int hdc int int
+GDI 11 SetWindowOrg dword hdc int int
+GDI 12 SetWindowExt dword hdc int int
+GDI 13 SetViewportOrg dword hdc int int
+GDI 14 SetViewportExt dword hdc int int
+GDI 15 OffsetWindowOrg dword hdc int int
+GDI 16 ScaleWindowExt dword hdc int int int int
+GDI 17 OffsetViewportOrg dword hdc int int
+GDI 18 ScaleViewportExt dword hdc int int int int
+GDI 19 LineTo bool hdc int int
+GDI 20 MoveTo dword hdc int int
+GDI 21 ExcludeClipRect int hdc int int int int
+GDI 22 IntersectClipRect int hdc int int int int
+GDI 23 Arc bool hdc int int int int int int int int
+GDI 24 Ellipse bool hdc int int int int
+GDI 25 FloodFill bool hdc int int colorref
+GDI 26 Pie bool hdc int int int int int int int int
+GDI 27 Rectangle bool hdc int int int int
+GDI 28 RoundRect bool hdc int int int int int int
+GDI 29 PatBlt bool hdc int int int int dword
+GDI 30 SaveDC int hdc
+GDI 31 SetPixel colorref hdc int int colorref
+GDI 32 OffsetClipRgn int hdc int int
+GDI 33 TextOut bool hdc int int str int
+GDI 34 BitBlt bool hdc int int int int hdc int int dword
+GDI 35 StretchBlt bool hdc int int int int hdc int int int int dword
+GDI 36 Polygon bool hdc ptr int !custom
+GDI 37 Polyline bool hdc ptr int !custom
+GDI 38 Escape int hdc int int ptr ptr !custom
+GDI 39 RestoreDC bool hdc int
+GDI 40 FillRgn bool hdc hrgn hbrush
+GDI 41 FrameRgn bool hdc hrgn hbrush int int
+GDI 42 InvertRgn bool hdc hrgn
+GDI 43 PaintRgn bool hdc hrgn
+GDI 44 SelectClipRgn int hdc hrgn
+GDI 45 SelectObject hgdi hdc hgdi
+GDI 47 CombineRgn int hrgn hrgn hrgn int
+GDI 48 CreateBitmap hbitmap int int word word ptr
+GDI 49 CreateBitmapIndirect hbitmap ptr !custom
+GDI 50 CreateBrushIndirect hbrush ptr !custom
+GDI 51 CreateCompatibleBitmap hbitmap hdc int int
+GDI 52 CreateCompatibleDC hdc hdc
+GDI 53 CreateDC hdc str str str ptr !custom
+GDI 54 CreateEllipticRgn hrgn int int int int
+GDI 55 CreateEllipticRgnIndirect hrgn rect_in
+GDI 56 CreateFont hfont int int int int int byte byte byte byte byte byte byte byte str
+GDI 57 CreateFontIndirect hfont ptr !custom
+GDI 58 CreateHatchBrush hbrush int colorref
+GDI 60 CreatePatternBrush hbrush hbitmap
+GDI 61 CreatePen hpen int int colorref
+GDI 62 CreatePenIndirect hpen ptr !custom
+GDI 63 CreatePolygonRgn hrgn ptr int int !custom
+GDI 64 CreateRectRgn hrgn int int int int
+GDI 65 CreateRectRgnIndirect hrgn rect_in
+GDI 66 CreateSolidBrush hbrush colorref
+GDI 67 DPtoLP bool hdc ptr int !custom
+GDI 68 DeleteDC bool hdc
+GDI 69 DeleteObject bool hgdi
+GDI 70 EnumFonts int hdc str segptr long !custom
+GDI 72 EqualRgn bool hrgn hrgn
+GDI 74 GetBitmapBits long hbitmap long ptr
+GDI 75 GetBkColor colorref hdc
+GDI 76 GetBkMode int hdc
+GDI 77 GetClipBox int hdc rect_io
+GDI 78 GetCurrentPosition dword hdc
+GDI 79 GetDCOrg dword hdc
+GDI 80 GetDeviceCaps int hdc int
+GDI 81 GetMapMode int hdc
+GDI 82 GetObject int hgdi int ptr !custom
+GDI 83 GetPixel colorref hdc int int
+GDI 84 GetPolyFillMode int hdc
+GDI 85 GetROP2 int hdc
+GDI 86 GetRelAbs int hdc !custom
+GDI 87 GetStockObject hgdi int
+GDI 88 GetStretchBltMode int hdc
+GDI 89 GetTextCharacterExtra int hdc
+GDI 90 GetTextColor colorref hdc
+GDI 91 GetTextExtent dword hdc str int
+GDI 92 GetTextFace int hdc int buf
+GDI 93 GetTextMetrics bool hdc ptr !custom
+GDI 94 GetViewportExt dword hdc
+GDI 95 GetViewportOrg dword hdc
+GDI 96 GetWindowExt dword hdc
+GDI 97 GetWindowOrg dword hdc
+GDI 99 LPtoDP bool hdc ptr int !custom
+GDI 100 LineDDA void int int int int segptr long !custom
+GDI 101 OffsetRgn int hrgn int int
+GDI 103 PtVisible bool hdc int int
+GDI 106 SetBitmapBits long hbitmap dword ptr
+GDI 119 AddFontResource int str
+GDI 123 PlayMetaFile bool hdc word !custom
+GDI 124 GetMetaFile word str !custom
+GDI 125 CreateMetaFile hdc str
+GDI 126 CloseMetaFile word hdc !custom
+GDI 127 DeleteMetaFile bool word !custom
+GDI 128 MulDiv int int int int !custom
+GDI 134 GetRgnBox int hrgn rect_io
+GDI 136 RemoveFontResource bool str
+GDI 148 SetBrushOrg dword hdc int int
+GDI 149 GetBrushOrg dword hdc
+GDI 150 UnrealizeObject bool hgdi
+GDI 151 CopyMetaFile word word str !custom
+GDI 153 CreateIC hdc str str str ptr !custom
+GDI 154 GetNearestColor colorref hdc colorref
+GDI 156 CreateDiscardableBitmap hbitmap hdc int int
+GDI 159 GetMetaFileBits word word !custom
+GDI 160 SetMetaFileBits word word !custom
+GDI 161 PtInRegion bool hrgn int int
+GDI 162 GetBitmapDimension dword hbitmap
+GDI 163 SetBitmapDimension dword hbitmap int int
+GDI 172 SetRectRgn void hrgn int int int int
+GDI 175 EnumMetaFile bool hdc word segptr long !custom
+GDI 176 PlayMetaFileRecord void hdc ptr ptr word !custom
+GDI 196 SetMetaFileBitsBetter word word =SetMetaFileBits !custom
+GDI 330 EnumFontFamilies int hdc str segptr long !custom
+GDI 345 GetTextAlign word hdc
+GDI 346 SetTextAlign word hdc word
+GDI 348 Chord bool hdc int int int int int int int int
+GDI 349 SetMapperFlags dword hdc dword
+GDI 350 GetCharWidth bool hdc word word ptr !custom
+GDI 351 ExtTextOut bool hdc int int word ptr ptr word ptr !custom
+GDI 360 CreatePalette hpalette ptr
+GDI 361 GDISelectPalette hpalette hdc hpalette bool =SelectPalette
+GDI 362 GDIRealizePalette uint hdc =RealizePalette
+GDI 363 GetPaletteEntries uint hpalette word word ptr
+GDI 364 SetPaletteEntries uint hpalette word word ptr
+GDI 366 UpdateColors int hdc
+GDI 367 AnimatePalette void hpalette word word ptr
+GDI 368 ResizePalette bool hpalette word
+GDI 370 GetNearestPaletteIndex uint hpalette colorref
+GDI 372 ExtFloodFill bool hdc int int colorref word
+GDI 373 SetSystemPaletteUse uint hdc word
+GDI 374 GetSystemPaletteUse uint hdc
+GDI 375 GetSystemPaletteEntries uint hdc word word ptr
+GDI 377 StartDoc int hdc ptr !custom
+GDI 378 EndDoc int hdc
+GDI 379 StartPage int hdc
+GDI 380 EndPage int hdc
+GDI 381 SetAbortProc int hdc segptr !custom
+GDI 382 AbortDoc int hdc
+GDI 439 StretchDIBits int hdc int int int int int int int int ptr ptr word long !custom
+GDI 440 SetDIBits int hdc hbitmap word word ptr ptr word !custom
+GDI 441 GetDIBits int hdc hbitmap word word ptr ptr word !custom
+GDI 442 CreateDIBitmap hbitmap hdc ptr long ptr ptr word !custom
+GDI 443 SetDIBitsToDevice int hdc int int int int int int word word ptr ptr word !custom
+GDI 444 CreateRoundRectRgn hrgn int int int int int int
+GDI 445 CreateDIBPatternBrush hbrush word word !custom
+GDI 450 PolyPolygon bool hdc ptr ptr int !custom
+GDI 451 CreatePolyPolygonRgn hrgn ptr ptr int int !custom
+GDI 462 IsGDIObject word hgdi !custom
+GDI 465 RectVisible bool hdc rect_in
+GDI 466 RectInRegion bool hrgn rect_in
+GDI 468 GetBitmapDimensionEx bool hbitmap size_out
+GDI 469 GetBrushOrgEx bool hdc point_out
+GDI 470 GetCurrentPositionEx bool hdc point_out
+GDI 471 GetTextExtentPoint bool hdc str int size_out
+GDI 472 GetViewportExtEx bool hdc size_out
+GDI 473 GetViewportOrgEx bool hdc point_out
+GDI 474 GetWindowExtEx bool hdc size_out
+GDI 475 GetWindowOrgEx bool hdc point_out
+GDI 476 OffsetViewportOrgEx bool hdc int int point_out
+GDI 477 OffsetWindowOrgEx bool hdc int int point_out
+GDI 478 SetBitmapDimensionEx bool hbitmap int int size_out
+GDI 479 SetViewportExtEx bool hdc int int size_out
+GDI 480 SetViewportOrgEx bool hdc int int point_out
+GDI 481 SetWindowExtEx bool hdc int int size_out
+GDI 482 SetWindowOrgEx bool hdc int int point_out
+GDI 483 MoveToEx bool hdc int int point_io
+GDI 484 ScaleViewportExtEx bool hdc int int int int size_out
+GDI 485 ScaleWindowExtEx bool hdc int int int int size_out
+GDI 486 GetAspectRatioFilterEx bool hdc size_out
+COMMDLG 1 GetOpenFileName bool ptr !custom
+COMMDLG 2 GetSaveFileName bool ptr !custom
+COMMDLG 5 ChooseColor bool ptr !custom
+COMMDLG 11 FindText hwnd ptr !custom
+COMMDLG 12 ReplaceText hwnd ptr !custom
+COMMDLG 15 ChooseFont bool ptr !custom
+COMMDLG 20 PrintDlg bool ptr !custom
+COMMDLG 26 CommDlgExtendedError dword !custom
+COMMDLG 27 GetFileTitle int str ptr word !custom
+SHELL 1 RegOpenKey long long str ptr !custom
+SHELL 2 RegCreateKey long long str ptr !custom
+SHELL 3 RegCloseKey long long !custom
+SHELL 4 RegDeleteKey long long str !custom
+SHELL 5 RegSetValue long long str long str long !custom
+SHELL 6 RegQueryValue long long str ptr ptr !custom
+SHELL 7 RegEnumKey long long long ptr long !custom
+SHELL 9 DragAcceptFiles void word word !custom
+SHELL 11 DragQueryFile word word int ptr int !custom
+SHELL 12 DragFinish void word !custom
+SHELL 13 DragQueryPoint bool word ptr !custom
+SHELL 20 ShellExecute word word str str str str int !custom
+SHELL 21 FindExecutable word str str ptr !custom
+SHELL 22 ShellAbout int word str str word !custom
+SHELL 34 ExtractIcon word word str int !custom
+SHELL 37 DoEnvironmentSubst dword ptr word !custom
+MMSYSTEM 2 sndPlaySound bool str word !custom
+MMSYSTEM 3 PlaySound bool str word long =sndPlaySound !custom
+MMSYSTEM 5 mmsystemGetVersion word !custom
+MMSYSTEM 101 joyGetNumDevs word =NoDevices !custom
+MMSYSTEM 102 joyGetDevCaps word word ptr word =NoDriver !custom
+MMSYSTEM 103 joyGetPos word word ptr =NoDriver !custom
+MMSYSTEM 201 midiOutGetNumDevs word =NoDevices !custom
+MMSYSTEM 202 midiOutGetDevCaps word word ptr word =NoDriver !custom
+MMSYSTEM 204 midiOutOpen word ptr word long long long =NoDriver !custom
+MMSYSTEM 301 midiInGetNumDevs word =NoDevices !custom
+MMSYSTEM 350 auxGetNumDevs word =NoDevices !custom
+MMSYSTEM 401 waveOutGetNumDevs word =NoDevices !custom
+MMSYSTEM 402 waveOutGetDevCaps word word ptr word =NoDriver !custom
+MMSYSTEM 404 waveOutOpen word ptr word ptr long long long =NoDriver !custom
+MMSYSTEM 501 waveInGetNumDevs word =NoDevices !custom
+MMSYSTEM 601 timeGetSystemTime word ptr word !custom
+MMSYSTEM 602 timeSetEvent word word word segptr long word !custom
+MMSYSTEM 603 timeKillEvent word word !custom
+MMSYSTEM 604 timeGetDevCaps word ptr word !custom
+MMSYSTEM 605 timeBeginPeriod word word !custom
+MMSYSTEM 606 timeEndPeriod word word =timeBeginPeriod !custom
+MMSYSTEM 607 timeGetTime dword !custom
+MMSYSTEM 701 mciSendCommand dword word word long long !custom
+MMSYSTEM 702 mciSendString dword str ptr word word !custom
+MMSYSTEM 706 mciGetErrorString bool long ptr word !custom
+LZEXPAND 1 LZCopy long word word !custom
+LZEXPAND 2 LZOpenFile int str ptr word !custom
+LZEXPAND 3 LZInit int word !custom
+LZEXPAND 4 LZSeek long hfile long int !custom
+LZEXPAND 5 LZRead int hfile ptr int !custom
+LZEXPAND 6 LZClose void hfile !custom
+LZEXPAND 7 LZStart int !custom
+LZEXPAND 8 CopyLZFile long word word =LZCopy !custom
+LZEXPAND 9 LZDone void !custom
+LZEXPAND 10 GetExpandedName int str ptr !custom
+VER 2 GetFileResourceSize dword str str str ptr =NoVersion !custom
+VER 3 GetFileResource bool str str str long long ptr =NoVersion !custom
+VER 6 GetFileVersionInfoSize dword str ptr !custom
+VER 7 GetFileVersionInfo bool str long long ptr =NoVersion !custom
+VER 8 VerFindFile word word str str str ptr ptr ptr ptr =NoVersion !custom
+VER 9 VerInstallFile dword word str str str str str ptr ptr =NoVersion !custom
+VER 10 VerLanguageName word word ptr word !custom
+VER 11 VerQueryValue bool segptr str ptr ptr =NoVersion !custom
+WIN87EM 1 __fpMath void =fpMath !regs
+WIN87EM 3 __WinEm87Info int ptr word =WinEm87Info !custom
+WIN87EM 4 __WinEm87Restore int ptr word =WinEm87Info !custom
+WIN87EM 5 __WinEm87Save int ptr word =WinEm87Info !custom
+KEYBOARD 4 ToAscii int word word ptr ptr word
+KEYBOARD 5 AnsiToOem int str buf =AnsiToOem16 !custom
+KEYBOARD 6 OemToAnsi int str buf =OemToAnsi16 !custom
+KEYBOARD 130 GetKeyboardType int int !custom
+KEYBOARD 131 MapVirtualKey word word word
+KEYBOARD 132 GetKBCodePage int !custom
+SOUND 1 OpenSound int !custom
+SOUND 2 CloseSound void =NoSound !custom
+SOUND 3 SetVoiceQueueSize int int int =NoSound !custom
+SOUND 4 SetVoiceNote int int int int int =NoSound !custom
+SOUND 5 SetVoiceAccent int int int int int int =NoSound !custom
+SOUND 8 SetVoiceSound int int long int =NoSound !custom
+SOUND 9 StartSound int =NoSound !custom
+SOUND 10 StopSound int =NoSound !custom
+SOUND 11 WaitSoundState int int =NoSound !custom
+SOUND 12 SyncAllVoices int =NoSound !custom
+SOUND 13 CountVoiceNotes int int =NoSound !custom
+SOUND 17 DoBeep int !custom
+SYSTEM 1 InquireSystem dword word word !custom
+SYSTEM 6 GetSystemMSecCount dword !custom
+TOOLHELP 71 SystemHeapInfo bool ptr !custom
+TOOLHELP 59 ModuleFirst bool ptr =NoToolHelp !custom
+TOOLHELP 60 ModuleNext bool ptr =NoToolHelp !custom
+TOOLHELP 63 TaskFirst bool ptr =NoToolHelp !custom
+TOOLHELP 64 TaskNext bool ptr =NoToolHelp !custom
+TOOLHELP 73 NotifyRegister bool word segptr word !custom
+TOOLHELP 74 NotifyUnregister bool word =NotifyRegister !custom
+TOOLHELP 75 InterruptRegister bool word segptr =NotifyRegister !custom
+TOOLHELP 76 InterruptUnRegister bool word =NotifyRegister !custom
+TOOLHELP 80 TimerCount bool ptr !custom
+PSCRIPT 13 DeviceMode void hwnd word str str !custom
+PSCRIPT 90 ExtDeviceMode int hwnd word ptr str str ptr str word !custom
+PSCRIPT 91 DeviceCapabilities dword str str word ptr ptr !custom

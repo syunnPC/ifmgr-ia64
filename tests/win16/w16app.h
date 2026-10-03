@@ -1,0 +1,20 @@
+/* SPDX-License-Identifier: GPL-2.0-or-later */
+#define IDI_APP 1
+#define IDR_MENU 2
+#define IDR_ACCEL 3
+#define IDD_ABOUT 4
+#define IDB_TEST 5
+#define IDR_DATA 7
+#define IDM_ABOUT 101
+#define IDM_EXIT 102
+#define IDM_OPEN 103
+#define IDM_FONT 104
+#define IDM_COLOR 105
+#define IDM_FIND 106
+#define IDM_PRINT 107
+#define IDC_TEXT 201
+#define IDC_EDIT 301
+#define IDC_BUTTON 302
+#define IDC_CHECK 303
+#define IDC_LIST 304
+#define IDC_OWNER 305

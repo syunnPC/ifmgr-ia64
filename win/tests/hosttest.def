@@ -1,0 +1,11 @@
+; SPDX-License-Identifier: GPL-2.0-or-later
+LIBRARY HOSTTEST.DLL
+EXPORTS
+    host_trace
+    host_load
+    host_proc
+    host_proc_ordinal
+    host_free
+    host_module
+    host_resource
+    host_value DATA

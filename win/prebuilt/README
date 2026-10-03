@@ -1,0 +1,4 @@
+The PE loader's test modules (petest.exe and the DLLs it loads), built from
+win/tests and win/sdk with the WDK's IA-64 compiler and linker, so that the
+loader tests run without the WDK. `make win-prebuilt` rebuilds them. They are
+this project's code, GPL-2.0-or-later, linked with no Microsoft library.

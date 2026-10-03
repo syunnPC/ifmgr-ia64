@@ -1,0 +1,35 @@
+// SPDX-License-Identifier: GPL-2.0-or-later
+#include "windefs.h"
+#include "helpmenu.h"
+#include "pbrush.h"
+
+PBRUSH ICON "build\\win\\icons\\pbrush.ico"
+
+PBRUSH MENU {
+    POPUP "&File" {
+        MENUITEM "&New", IDM_NEW
+        MENUITEM "&Open...", IDM_OPEN
+        MENUITEM "&Save", IDM_SAVE
+        MENUITEM "Save &As...", IDM_SAVEAS
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit", IDM_EXIT
+    }
+    POPUP "&Edit" {
+        MENUITEM "&Undo\tCtrl+Z", IDM_UNDO
+        MENUITEM "&Clear", IDM_CLEAR
+    }
+    POPUP "&Help" {
+        MENUITEM "&Index", IDM_HELPINDEX
+        MENUITEM "&Keyboard", IDM_HELPKEYBOARD
+        MENUITEM "&Commands", IDM_HELPCOMMANDS
+        MENUITEM "&Procedures", IDM_HELPPROCEDURES
+        MENUITEM "&Using Help", IDM_HELPUSING
+        MENUITEM SEPARATOR
+        MENUITEM "&About Paintbrush...", IDM_ABOUT
+    }
+}
+
+PBRUSH ACCELERATORS {
+    "^Z", IDM_UNDO
+    VK_F1, IDM_HELPINDEX, VIRTKEY
+}

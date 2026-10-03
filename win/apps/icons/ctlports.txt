@@ -1,0 +1,24 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
+# Ports: a serial connector (a gray shell with two rows of pins) and its cable.
+
+
+
+    KKKKKKKKKKKKKKKKKKKKKKKK
+    KLLLLLLLLLLLLLLLLLLLLLLK
+    KLWWWWWWWWWWWWWWWWWWWWLK
+    KLWKKWKKWKKWKKWKKWKKWLLK
+     KLWWWWWWWWWWWWWWWWWLLK
+     KLWWKKWKKWKKWKKWKKWLK
+      KLWWWWWWWWWWWWWWWLLK
+      KLLLLLLLLLLLLLLLLLLK
+       KKKKKKKKKKKKKKKKKK
+              KDDK
+              KDDK
+              KDDK
+              KDDK
+              KDDK
+              KDDK
+              KDDK
+             KDDDDK
+            KDDDDDDK
+            KKKKKKKK

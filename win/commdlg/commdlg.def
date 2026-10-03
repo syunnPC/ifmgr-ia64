@@ -1,0 +1,21 @@
+; SPDX-License-Identifier: GPL-2.0-or-later
+; COMMDLG.DLL: Windows 3.1's common dialogs, and the Win32 "A" names.
+LIBRARY COMMDLG.DLL
+EXPORTS
+    GetOpenFileName
+    GetSaveFileName
+    GetFileTitle
+    ChooseColor
+    ChooseFont
+    FindText
+    ReplaceText
+    PrintDlg
+    CommDlgExtendedError
+    GetOpenFileNameA = GetOpenFileName
+    GetSaveFileNameA = GetSaveFileName
+    GetFileTitleA = GetFileTitle
+    ChooseColorA = ChooseColor
+    ChooseFontA = ChooseFont
+    FindTextA = FindText
+    ReplaceTextA = ReplaceText
+    PrintDlgA = PrintDlg

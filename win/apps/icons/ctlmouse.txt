@@ -1,0 +1,33 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
+# Mouse: a mouse with two buttons and a cord.
+
+               KK
+               K
+              KK
+              K
+         KKKKKKKKKKKKKK
+        KWWWWWKWWKWWWWWK
+       KWWWWWWKWWKWWWWWWK
+       KWWWWWWKWWKWWWWWWK
+       KWWWWWWKWWKWWWWWWK
+       KWWWWWWKWWKWWWWWWK
+       KKKKKKKKKKKKKKKKKK
+       KLLLLLLLLLLLLLLLLK
+       KLLLLLLLLLLLLLLLLK
+       KLLLLLLLLLLLLLLLLK
+       KLLLLLLLLLLLLLLLLK
+       KLLLLLLLLLLLLLLLLK
+       KLLLLLLLLLLLLLLLLK
+       KLLLLLLLLLLLLLLLLK
+       KLLLLLLLLLLLLLLLLK
+       KLLLLLLLLLLLLLLLLK
+        KLLLLLLLLLLLLLLK
+         KLLLLLLLLLLLLK
+          KKKKKKKKKKKK
+
+
+
+
+
+
+
